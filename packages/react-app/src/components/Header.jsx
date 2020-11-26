@@ -89,7 +89,7 @@ export const Header = () => {
           </Flex>
         </Link> */}
         <WalletSelector />
-        <NetworkSelector />
+        {/* <NetworkSelector /> */}
         <LanguageSelector />
       </Stack>
     </Flex>
