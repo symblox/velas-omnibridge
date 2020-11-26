@@ -35,31 +35,30 @@ export const networkOptions = [
     name: 'VELAS',
     icon: <NetworkIcon />,
   },
-
-  // {
-  //   value: 77,
-  //   key: 2,
-  //   bridge: { chainId: 42, name: 'Kovan Testnet' },
-  //   label: 'Sokol',
-  //   name: 'Sokol Testnet',
-  //   icon: <NetworkIcon />,
-  // },
-  // {
-  //   value: 111,
-  //   key: 0,
-  //   bridge: { chainId: 42, name: 'Kovan Testnet' },
-  //   label: 'VELAS (Testnet)',
-  //   name: 'VELAS Testnet',
-  //   icon: <NetworkIcon />,
-  // },
-  // {
-  //   value: 42,
-  //   key: 1,
-  //   bridge: { chainId: 111, name: 'VELAS Testnet' },
-  //   label: 'Kovan',
-  //   name: 'Kovan Testnet',
-  //   icon: <NetworkIcon />,
-  // },
+  {
+    value: 77,
+    key: 2,
+    bridge: { chainId: 42, name: 'Kovan Testnet' },
+    label: 'Sokol',
+    name: 'Sokol Testnet',
+    icon: <NetworkIcon />,
+  },
+  {
+    value: 111,
+    key: 0,
+    bridge: { chainId: 42, name: 'Kovan Testnet' },
+    label: 'VELAS (Testnet)',
+    name: 'VELAS Testnet',
+    icon: <NetworkIcon />,
+  },
+  {
+    value: 42,
+    key: 1,
+    bridge: { chainId: 111, name: 'VELAS Testnet' },
+    label: 'Kovan',
+    name: 'Kovan Testnet',
+    icon: <NetworkIcon />,
+  },
 ];
 
 export const networkNames = {

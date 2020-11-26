@@ -139,6 +139,8 @@ export const BridgeProvider = ({ children }) => {
         return v;
       }
     }
+
+    return networkOptions[0];
   }
 
   useEffect(() => {
@@ -146,8 +148,8 @@ export const BridgeProvider = ({ children }) => {
       setDefaultToken(getNetworkOption(window.ethereum.chainId).value);
       setNetwork(getNetworkOption(window.ethereum.chainId));
     }else{
-      setDefaultToken(getNetworkOption(1).value);
-      setNetwork(getNetworkOption(1));
+      setDefaultToken(networkOptions[0].value);
+      setNetwork(networkOptions[0]);
     }
     
     const subscriptions = [];
