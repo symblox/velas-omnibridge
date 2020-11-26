@@ -1,6 +1,6 @@
 import { Flex, Image, Text, useDisclosure } from '@chakra-ui/core';
 import React, { useContext, useState } from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import TransferIcon from '../assets/transfer.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
@@ -96,7 +96,7 @@ export const TransferButton = () => {
         align="center"
       >
         <Text color="white" fontWeight="bold">
-          Transfer
+          <FormattedMessage id="TRANSFER" />
         </Text>
         <Image src={TransferIcon} ml={2} />
       </Flex>

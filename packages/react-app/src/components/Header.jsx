@@ -1,10 +1,11 @@
 import { Button, Flex, Image, Stack, Text } from '@chakra-ui/core';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { FormattedMessage } from 'react-intl';
 import Logo from '../assets/logo.svg';
-import { HistoryIcon } from '../icons/HistoryIcon';
+// import { HistoryIcon } from '../icons/HistoryIcon';
 import { NetworkSelector } from './NetworkSelector';
+import { LanguageSelector } from './LanguageSelector';
 import { WalletSelector } from './WalletSelector';
 
 export const Header = () => {
@@ -31,7 +32,9 @@ export const Header = () => {
         <Link to="/">
           <Flex justify="space-around" align="center">
             <Image src={Logo} mr={4} />
-            <Text fontWeight="bold">OmniBridge</Text>
+            <Text fontWeight="bold">
+              <FormattedMessage id="LOGO" />
+            </Text>
           </Flex>
         </Link>
         <Button
@@ -72,7 +75,7 @@ export const Header = () => {
         align={{ base: 'flex-start', md: 'center' }}
         pb={{ base: 4, md: 0 }}
       >
-        <Link to="/history">
+        {/* <Link to="/history">
           <Flex
             align="center"
             px={4}
@@ -84,9 +87,10 @@ export const Header = () => {
             <HistoryIcon mr={2} />
             <Text color="black"> History</Text>
           </Flex>
-        </Link>
+        </Link> */}
         <WalletSelector />
         <NetworkSelector />
+        <LanguageSelector />
       </Stack>
     </Flex>
   );

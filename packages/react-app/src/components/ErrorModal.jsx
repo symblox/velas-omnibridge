@@ -8,7 +8,7 @@ import {
   Text,
 } from '@chakra-ui/core';
 import React from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import { ErrorIcon } from '../icons/ErrorIcon';
 
 export const ErrorModal = ({ message, isOpen, onClose }) => {
@@ -36,7 +36,7 @@ export const ErrorModal = ({ message, isOpen, onClose }) => {
               <ErrorIcon size={20} mr={4} color="red.500" />
               <Flex flex={1} direction="column">
                 <Text fontWeight="bold" fontSize="xl" width="100%">
-                  Error
+                  <FormattedMessage id="ERROR" />
                 </Text>
                 <Text width="100%">{message || ''}</Text>
               </Flex>

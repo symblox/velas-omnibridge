@@ -5,6 +5,19 @@ import { NetworkIcon } from '../icons/NetworkIcon';
 
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000';
 
+export const languageOptions = [
+  {
+    key: 'zh',
+    value: '中文',
+    icon: <NetworkIcon />,
+  },
+  {
+    key: 'en',
+    value: 'EN',
+    icon: <NetworkIcon />,
+  },
+];
+
 export const networkOptions = [
   {
     value: 1,

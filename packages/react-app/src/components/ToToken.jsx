@@ -1,6 +1,6 @@
 import { Flex, Text, useBreakpointValue } from '@chakra-ui/core';
 import React, { useContext, useEffect } from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
 import { formatValue } from '../lib/helpers';
@@ -79,7 +79,8 @@ export const ToToken = () => {
             </Flex>
             {balance >= 0 && (
               <Text color="grey" mt={{ base: 2, lg: 0 }}>
-                {`Balance: ${formatValue(balance, token.decimals)}`}
+                <FormattedMessage id="BALANCE" />
+                {`: ${formatValue(balance, token.decimals)}`}
               </Text>
             )}
           </Flex>

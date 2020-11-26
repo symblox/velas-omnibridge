@@ -8,7 +8,7 @@ import {
   Text,
 } from '@chakra-ui/core';
 import React, { useContext } from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import { Web3Context } from '../contexts/Web3Context';
 import { ErrorIcon } from '../icons/ErrorIcon';
 import { WalletIcon } from '../icons/WalletIcon';
@@ -68,7 +68,7 @@ export const WalletSelector = props => {
               </Flex>
               {networkMismatch && (
                 <Text textAlign="left" mt={4} color="red.500" fontWeight="bold">
-                  Please switch wallet to {network.name}
+                  <FormattedMessage id="NETWORK_SWITCH_TIP" /> {network.name}
                 </Text>
               )}
             </PopoverBody>
