@@ -144,9 +144,9 @@ export const BridgeProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    if(window.ethereum.chainId){
-      setDefaultToken(getNetworkOption(window.ethereum.chainId).value);
-      setNetwork(getNetworkOption(window.ethereum.chainId));
+    if(providerNetwork && providerNetwork.chainId){
+      setDefaultToken(getNetworkOption(providerNetwork.chainId).value);
+      setNetwork(getNetworkOption(providerNetwork.chainId));
     }else{
       setDefaultToken(networkOptions[0].value);
       setNetwork(networkOptions[0]);
