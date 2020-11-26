@@ -107,12 +107,12 @@ export const defaultTokens = {
   },
   1: {
     name: 'USDT',
-    address: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+    address: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
     symbol: 'USDT',
     decimals: 6,
     chainId: 1,
     logoURI:
-      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdac17f958d2ee523a2206206994597c13d831ec7/logo.png',
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
   },
   77: {
     name: 'FaucetToken on xDai',
@@ -141,6 +141,8 @@ export const defaultTokens = {
     symbol: 'USDT',
     decimals: 6,
     chainId: 106,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
   },
 };
 
