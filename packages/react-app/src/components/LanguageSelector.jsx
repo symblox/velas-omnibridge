@@ -58,7 +58,7 @@ const SelectValue = ({ icon, value }) => (
     <Text color="black" ml={2} fontWeight="bold">
       {value}
     </Text>
-    <DropdownIndicator />
+    {/* <DropdownIndicator /> */}
   </Flex>
 );
 

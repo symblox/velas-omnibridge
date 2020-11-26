@@ -15,14 +15,14 @@ export const Header = () => {
     <Flex
       justify="space-between"
       position="relative"
-      align={{ base: 'stretch', md: 'center' }}
+      align={{ base: 'center', md: 'center' }}
       maxW="75rem"
       minH={20}
-      px={8}
+      pl={2}
       w="100%"
       background={isOpen ? { base: 'white', md: 'transparent' } : 'transparent'}
-      direction={{ base: 'column', md: 'row' }}
-      mb={isOpen ? { base: 4, md: 0 } : 0}
+      direction={{ base: 'row', md: 'row' }}
+      // mb={isOpen ? { base: 4, md: 0 } : 0}
       boxShadow={
         isOpen ? { base: '0 0.5rem 1rem #CADAEF', md: 'none' } : 'none'
       }
@@ -36,7 +36,7 @@ export const Header = () => {
             </Text>
           </Flex>
         </Link>
-        <Button
+        {/* <Button
           variant="link"
           // _focus={{ outline: 'none', border: 'none' }}
           display={{ base: 'block', md: 'none' }}
@@ -62,17 +62,23 @@ export const Header = () => {
               />
             </svg>
           )}
-        </Button>
+        </Button> */}
       </Flex>
       <Stack
-        position={{ base: 'relative', md: 'static' }}
-        direction={{ base: 'column', md: 'row' }}
-        spacing={4}
-        display={{ base: isOpen ? 'flex' : 'none', md: 'flex' }}
-        // zIndex={{ base: 1, md: 'auto' }}
-        w={{ base: '100%', md: 'auto' }}
-        align={{ base: 'flex-start', md: 'center' }}
-        pb={{ base: 4, md: 0 }}
+      position={{ base: 'static' }}
+        direction={{ base: 'row' }}
+        spacing={0}
+        
+        w={{ base: 'auto' }}
+        align={{ base: 'center' }}
+        pb={{ base: 0 }}
+        // position={{ base: 'relative', md: 'static' }}
+        // direction={{ base: 'column', md: 'row' }}
+        // spacing={4}
+        // display={{ base: isOpen ? 'flex' : 'none', md: 'flex' }}
+        // w={{ base: '100%', md: 'auto' }}
+        // align={{ base: 'flex-start', md: 'center' }}
+        // pb={{ base: 4, md: 0 }}
       >
         {/* <Link to="/history">
           <Flex
