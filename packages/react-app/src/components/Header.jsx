@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import Logo from '../assets/logo.svg';
 // import { HistoryIcon } from '../icons/HistoryIcon';
-import { NetworkSelector } from './NetworkSelector';
 import { LanguageSelector } from './LanguageSelector';
 import { WalletSelector } from './WalletSelector';
 

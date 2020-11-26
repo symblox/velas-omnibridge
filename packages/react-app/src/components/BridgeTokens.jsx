@@ -10,7 +10,6 @@ import { SystemFeedback } from './SystemFeedback';
 import { ToToken } from './ToToken';
 import { TransferButton } from './TransferButton';
 import { UnlockButton } from './UnlockButton';
-import { networkNames } from '../lib/constants';
 
 export const BridgeTokens = () => {
   const { network } = useContext(Web3Context);
