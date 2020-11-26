@@ -14,7 +14,7 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/core';
 import React, { useContext, useEffect, useState } from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import TransferImage from '../assets/confirm-transfer.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { formatValue, isxDaiChain } from '../lib/helpers';
@@ -54,7 +54,9 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
         >
           <ModalHeader p={6}>
             {isERC20Dai && <DaiWarning />}
-            <Text>Confirm Transfer</Text>
+            <Text>
+              <FormattedMessage id="CONFIRM_TRANSFER" />
+            </Text>
           </ModalHeader>
           <ModalCloseButton
             size="lg"

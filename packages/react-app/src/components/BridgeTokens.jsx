@@ -1,6 +1,6 @@
 import { Flex, Grid, Text, useBreakpointValue } from '@chakra-ui/core';
 import React, { useContext } from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
 import { DaiWarning, isERC20DaiAddress } from './DaiWarning';
@@ -10,6 +10,7 @@ import { SystemFeedback } from './SystemFeedback';
 import { ToToken } from './ToToken';
 import { TransferButton } from './TransferButton';
 import { UnlockButton } from './UnlockButton';
+import { networkNames } from '../lib/constants';
 
 export const BridgeTokens = () => {
   const { network } = useContext(Web3Context);
@@ -37,7 +38,7 @@ export const BridgeTokens = () => {
             <Flex w="100%" justify="space-between">
               <Flex align="flex-start" direction="column">
                 <Text color="greyText" fontSize="sm">
-                  From
+                  <FormattedMessage id="FROM" />
                 </Text>
                 <Text fontWeight="bold" fontSize="lg">
                   {network.name}
@@ -46,7 +47,7 @@ export const BridgeTokens = () => {
               {isERC20Dai && <DaiWarning />}
               <Flex align="flex-end" direction="column">
                 <Text color="greyText" fontSize="sm">
-                  To
+                  <FormattedMessage id="TO" />
                 </Text>
                 <Text fontWeight="bold" fontSize="lg" textAlign="right">
                   {network.bridge.name}
@@ -63,7 +64,7 @@ export const BridgeTokens = () => {
             {smallScreen && (
               <Flex align="flex-start" direction="column" m={2}>
                 <Text color="greyText" fontSize="sm">
-                  From
+                  <FormattedMessage id="FROM" />
                 </Text>
                 <Text fontWeight="bold" fontSize="lg">
                   {network.name}
@@ -84,7 +85,7 @@ export const BridgeTokens = () => {
             {smallScreen && (
               <Flex align="flex-end" direction="column" m={2}>
                 <Text color="greyText" fontSize="sm">
-                  To
+                  <FormattedMessage id="TO" />
                 </Text>
                 <Text fontWeight="bold" fontSize="lg" textAlign="right">
                   {network.bridge.name}

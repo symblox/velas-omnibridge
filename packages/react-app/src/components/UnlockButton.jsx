@@ -1,6 +1,6 @@
 import { Flex, Image, Text, useDisclosure } from '@chakra-ui/core';
 import React, { useContext, useState } from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import UnlockIcon from '../assets/unlock.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
@@ -76,7 +76,11 @@ export const UnlockButton = () => {
         align="center"
       >
         <Text color="white" fontWeight="bold">
-          {allowed ? 'Unlocked' : 'Unlock'}
+          {allowed ? (
+            <FormattedMessage id="UNLOCKED" />
+          ) : (
+            <FormattedMessage id="UNLOCK" />
+          )}
         </Text>
         <Image src={UnlockIcon} ml={2} />
       </Flex>
