@@ -143,13 +143,13 @@ export const BridgeProvider = ({ children }) => {
     }
 
     return networkOptions[0];
-  }
+  };
 
   useEffect(() => {
-    if(providerNetwork && providerNetwork.chainId){
+    if (providerNetwork && providerNetwork.chainId) {
       setDefaultToken(getNetworkOption(providerNetwork.chainId).value);
       setNetwork(getNetworkOption(providerNetwork.chainId));
-    }else{
+    } else {
       setDefaultToken(networkOptions[0].value);
       setNetwork(networkOptions[0]);
     }
@@ -224,6 +224,7 @@ export const BridgeProvider = ({ children }) => {
     account,
     setNetwork,
     setDefaultToken,
+    providerNetwork,
   ]);
 
   const setDefaultTokenList = useCallback(
