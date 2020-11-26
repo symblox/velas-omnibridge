@@ -19,34 +19,25 @@ export const languageOptions = [
 ];
 
 export const networkOptions = [
-  // {
-  //   value: 1,
-  //   key: 0,
-  //   bridge: { chainId: 106, name: 'VELAS' },
-  //   label: 'Mainnet',
-  //   name: 'ETH Mainnet',
-  //   icon: <NetworkIcon />,
-  // },
-  // {
-  //   value: 106,
-  //   key: 1,
-  //   bridge: { chainId: 1, name: 'ETH Mainnet' },
-  //   label: 'VELAS',
-  //   name: 'VELAS',
-  //   icon: <NetworkIcon />,
-  // },
-
-  // {
-  //   value: 77,
-  //   key: 2,
-  //   bridge: { chainId: 42, name: 'Kovan Testnet' },
-  //   label: 'Sokol',
-  //   name: 'Sokol Testnet',
-  //   icon: <NetworkIcon />,
-  // },
+  {
+    value: 1,
+    key: 0,
+    bridge: { chainId: 106, name: 'VELAS' },
+    label: 'Mainnet',
+    name: 'ETH Mainnet',
+    icon: <NetworkIcon />,
+  },
+  {
+    value: 106,
+    key: 1,
+    bridge: { chainId: 1, name: 'ETH Mainnet' },
+    label: 'VELAS',
+    name: 'VELAS',
+    icon: <NetworkIcon />,
+  },
   {
     value: 111,
-    key: 0,
+    key: 3,
     bridge: { chainId: 42, name: 'Kovan Testnet' },
     label: 'VELAS (Testnet)',
     name: 'VELAS Testnet',
@@ -54,7 +45,7 @@ export const networkOptions = [
   },
   {
     value: 42,
-    key: 1,
+    key: 4,
     bridge: { chainId: 111, name: 'VELAS Testnet' },
     label: 'Kovan',
     name: 'Kovan Testnet',

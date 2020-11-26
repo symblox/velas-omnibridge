@@ -148,8 +148,8 @@ export const BridgeProvider = ({ children }) => {
       setDefaultToken(getNetworkOption(window.ethereum.chainId).value);
       setNetwork(getNetworkOption(window.ethereum.chainId));
     } else {
-      setDefaultToken(getNetworkOption(42).value);
-      setNetwork(getNetworkOption(42));
+      setDefaultToken(getNetworkOption(1).value);
+      setNetwork(getNetworkOption(1));
     }
 
     const subscriptions = [];
