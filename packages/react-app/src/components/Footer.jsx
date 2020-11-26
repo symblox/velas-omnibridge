@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { GithubIcon } from '../icons/GithubIcon';
-import { OmniBridgeIcon } from '../icons/OmniBridgeIcon';
+import { SymbloxIcon } from '../icons/SymbloxIcon';
 import { RaidGuildIcon } from '../icons/RaidGuildIcon';
 import { TelegramIcon } from '../icons/TelegramIcon';
 import { TwitterIcon } from '../icons/TwitterIcon';
@@ -30,23 +30,23 @@ export const Footer = () => {
             _hover={{ color: 'blue.500' }}
             transition="0.25s"
           >
-            <OmniBridgeIcon w={6} />
+            <SymbloxIcon w={6} />
           </Flex>
         </Link>
       )}
       <HStack spacing={4}>
         <Box _hover={{ color: 'blue.500' }}>
           <a
-            href="https://xdaichain.com"
+            href="https://symblox.io"
             rel="noreferrer noopener"
             target="_blank"
           >
-            <XDaiIcon />
+            <SymbloxIcon />
           </a>
         </Box>
         <Box _hover={{ color: 'blue.500' }} transition="0.25s">
           <a
-            href="https://twitter.com/xdaichain"
+            href="https://twitter.com/symbloxdefi"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -55,7 +55,7 @@ export const Footer = () => {
         </Box>
         <Box _hover={{ color: 'blue.500' }} transition="0.25s">
           <a
-            href="https://t.me/xdaistable"
+            href="https://t.me/symblox"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -64,28 +64,13 @@ export const Footer = () => {
         </Box>
         <Box _hover={{ color: 'blue.500' }} transition="0.25s">
           <a
-            href="https://github.com/xdaichain"
+            href="https://github.com/symblox"
             rel="noreferrer noopener"
             target="_blank"
           >
             <GithubIcon />
           </a>
         </Box>
-        <Box w="1px" h={5} background="grey" />
-        <a
-          href="https://raidguild.org"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          <Flex
-            align="center"
-            _hover={{ color: 'blue.500' }}
-            transition="0.25s"
-          >
-            <Text>Built by</Text>
-            <RaidGuildIcon boxSize={16} ml={2} />
-          </Flex>
-        </a>
       </HStack>
     </Flex>
   );

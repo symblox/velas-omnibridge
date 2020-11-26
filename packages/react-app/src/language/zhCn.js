@@ -1,5 +1,5 @@
 const zhCn = {
-  LOGO: 'OmniBridge',
+  LOGO: 'Symblox',
   FROM: '从',
   TO: '到',
   UNLOCKED: '已解锁',
@@ -7,7 +7,7 @@ const zhCn = {
   TRANSFER: '交易',
   CONFIRM_TRANSFER: '确认交易',
   BALANCE: '余额',
-  MAX: '最大',
+  MAX: '全部',
   ERROR: '错误',
   NETWORK_SWITCH_TIP: '请切换至',
   SYSTEM_FEEDBACK: '系统反馈',

@@ -1,5 +1,5 @@
 const enUs = {
-  LOGO: 'OmniBridge',
+  LOGO: 'Symblox',
   FROM: 'From',
   TO: 'To',
   UNLOCKED: 'Unlocked',

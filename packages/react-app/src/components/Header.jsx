@@ -2,7 +2,7 @@ import { Button, Flex, Image, Stack, Text } from '@chakra-ui/core';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
-import Logo from '../assets/logo.svg';
+import Logo from '../assets/symblox.svg';
 // import { HistoryIcon } from '../icons/HistoryIcon';
 import { LanguageSelector } from './LanguageSelector';
 import { WalletSelector } from './WalletSelector';
@@ -30,7 +30,7 @@ export const Header = () => {
       <Flex justify="space-between" h={20} align="center">
         <Link to="/">
           <Flex justify="space-around" align="center">
-            <Image src={Logo} mr={4} />
+            <Image src={Logo} w={6} />
             <Text fontWeight="bold">
               <FormattedMessage id="LOGO" />
             </Text>
