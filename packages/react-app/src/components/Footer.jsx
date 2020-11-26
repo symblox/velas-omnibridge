@@ -1,13 +1,11 @@
-import { Box, Flex, HStack, Text, useBreakpointValue } from '@chakra-ui/core';
+import { Box, Flex, HStack, useBreakpointValue } from '@chakra-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { GithubIcon } from '../icons/GithubIcon';
 import { SymbloxIcon } from '../icons/SymbloxIcon';
-import { RaidGuildIcon } from '../icons/RaidGuildIcon';
 import { TelegramIcon } from '../icons/TelegramIcon';
 import { TwitterIcon } from '../icons/TwitterIcon';
-import { XDaiIcon } from '../icons/XDaiIcon';
 
 export const Footer = () => {
   const smallScreen = useBreakpointValue({ base: true, sm: false });
