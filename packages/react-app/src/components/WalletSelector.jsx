@@ -32,7 +32,7 @@ export const WalletSelector = props => {
     <Flex {...props}>
       {!account && (
         <Button onClick={connectWeb3} colorScheme="blue">
-          <WalletIcon mr={2} />
+          {/* <WalletIcon mr={2} /> */}
           Connect Wallet
         </Button>
       )}
@@ -40,11 +40,11 @@ export const WalletSelector = props => {
         <Popover placement="bottom-end">
           <PopoverTrigger>
             <Button colorScheme={networkMismatch ? 'red' : 'blue'}>
-              {networkMismatch ? (
+              {/* {networkMismatch ? (
                 <ErrorIcon size={4} mr={2} color="white" />
               ) : (
                 <WalletIcon mr={2} />
-              )}
+              )} */}
               <Text> {getAccountString(account)} </Text>
             </Button>
           </PopoverTrigger>
