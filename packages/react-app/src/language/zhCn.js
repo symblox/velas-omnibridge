@@ -24,5 +24,10 @@ const zhCn = {
   WALLET_CONNECT: '连接钱包',
   WALLET_DISCONNECT: '登出',
   WALLET_CONNECT_TO: '已连接 {network}',
+  TRANSFER_CONNECT_WALLET: '请先连接钱包',
+  TRANSFER_SWITCH_WALLET: '请先切换至 {network} 网络',
+  TRANSFER_NOT_ENOUGH_BAL: '余额不足',
+  TRANSFER_AMOUNT_TOO_SMALL: '输入金额需大于 {amount}',
+  TRANSFER_AMOUNT_TOO_LARGE: '输入金额需小于 {amount}',
 };
 export default zhCn;

@@ -26,5 +26,10 @@ const enUs = {
   WALLET_CONNECT: 'Connect Wallet',
   WALLET_DISCONNECT: 'Disconnect',
   WALLET_CONNECT_TO: 'Connected to {network}',
+  TRANSFER_CONNECT_WALLET: 'Please connect wallet',
+  TRANSFER_SWITCH_WALLET: 'Please switch wallet to {network}',
+  TRANSFER_NOT_ENOUGH_BAL: 'Not enough balance',
+  TRANSFER_AMOUNT_TOO_SMALL: 'Please specify amount more than {amount}',
+  TRANSFER_AMOUNT_TOO_LARGE: 'Please specify amount less than {amount}',
 };
 export default enUs;

@@ -31,25 +31,30 @@ export const TransferButton = () => {
       return onOpen();
     }
     if (!ethersProvider) {
-      setMessage('Please connect wallet');
+      setMessage(<FormattedMessage id="TRANSFER_CONNECT_WALLET" />);
     } else if (networkMismatch) {
-      setMessage(`Please switch wallet to ${network.name}`);
+      setMessage(
+        <FormattedMessage
+          id="TRANSFER_SWITCH_WALLET"
+          values={{ network: network.name }}
+        />,
+      );
     } else if (window.BigInt(amount) < window.BigInt(tokenLimits.minPerTx)) {
       setMessage(
-        `Please specify amount more than ${formatValue(
-          tokenLimits.minPerTx,
-          token.decimals,
-        )}`,
+        <FormattedMessage
+          id="TRANSFER_AMOUNT_TOO_SMALL"
+          values={{ amount: formatValue(tokenLimits.minPerTx, token.decimals) }}
+        />,
       );
     } else if (window.BigInt(amount) >= window.BigInt(tokenLimits.maxPerTx)) {
       setMessage(
-        `Please specify amount less than ${formatValue(
-          tokenLimits.maxPerTx,
-          token.decimals,
-        )}`,
+        <FormattedMessage
+          id="TRANSFER_AMOUNT_TOO_LARGE"
+          values={{ amount: formatValue(tokenLimits.maxPerTx, token.decimals) }}
+        />,
       );
     } else if (window.BigInt(balance) < window.BigInt(amount)) {
-      setMessage('Not enough balance');
+      setMessage(<FormattedMessage id="TRANSFER_NOT_ENOUGH_BAL" />);
     }
     return onOpen();
   };
