@@ -173,8 +173,8 @@ export const getExplorerUrl = chainId => {
 };
 
 export const getMonitorUrl = (chainId, hash) => {
-  const url = 'https://alm-xdai.herokuapp.com/';
-  const testUrl = 'https://alm-test-amb.herokuapp.com/';
+  const url = 'https://amb-monitor.symblox.io/';
+  const testUrl = 'https://amb-monitor.test.symblox.io/';
   switch (chainId) {
     case 1:
       return `${url}1/${hash}`;
@@ -183,12 +183,8 @@ export const getMonitorUrl = (chainId, hash) => {
     case 111:
       return `${testUrl}111/${hash}`;
     case 106:
-      return `${testUrl}106/${hash}`;
-    case 77:
-      return `${testUrl}77/${hash}`;
-    case 100:
     default:
-      return `${url}100/${hash}`;
+      return `${url}106/${hash}`;
   }
 };
 
