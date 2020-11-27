@@ -10,7 +10,6 @@ import {
 import React, { useContext } from 'react';
 
 import { LanguageContext } from '../contexts/LanguageContext';
-import { DownArrowIcon } from '../icons/DownArrowIcon';
 import { languageOptions } from '../lib/constants';
 
 const SelectOption = props => {
@@ -37,14 +36,6 @@ const SelectOption = props => {
   );
 };
 
-const DropdownIndicator = () => {
-  return (
-    <Flex align="center" justify="center" paddingLeft="15px">
-      <DownArrowIcon fontSize={8} color="black" />
-    </Flex>
-  );
-};
-
 const SelectValue = ({ icon, value }) => (
   <Flex
     cursor="pointer"
@@ -58,7 +49,6 @@ const SelectValue = ({ icon, value }) => (
     <Text color="black" ml={2} fontWeight="bold">
       {value}
     </Text>
-    {/* <DropdownIndicator /> */}
   </Flex>
 );
 

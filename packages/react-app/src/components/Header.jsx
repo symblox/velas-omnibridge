@@ -1,4 +1,4 @@
-import { Button, Flex, Image, Stack, Text } from '@chakra-ui/core';
+import { Flex, Image, Stack, Text } from '@chakra-ui/core';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
@@ -8,8 +8,8 @@ import { LanguageSelector } from './LanguageSelector';
 import { WalletSelector } from './WalletSelector';
 
 export const Header = () => {
-  const [isOpen, setOpen] = useState(false);
-  const toggleOpen = () => setOpen(open => !open);
+  const [isOpen] = useState(false);
+  // const toggleOpen = () => setOpen(open => !open);
 
   return (
     <Flex
@@ -65,10 +65,9 @@ export const Header = () => {
         </Button> */}
       </Flex>
       <Stack
-      position={{ base: 'static' }}
+        position={{ base: 'static' }}
         direction={{ base: 'row' }}
         spacing={0}
-        
         w={{ base: 'auto' }}
         align={{ base: 'center' }}
         pb={{ base: 0 }}

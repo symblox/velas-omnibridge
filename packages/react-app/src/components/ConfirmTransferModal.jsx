@@ -127,11 +127,20 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
               </Flex>
             </Flex>
             <Flex align="center" fontSize="sm" justify="center" mt={4}>
-              {`Bridge Fees ${Number(fee.toFixed(3))}%`}
+              <FormattedMessage
+                id="BRIDGE_FEES"
+                values={{ fees: Number(fee.toFixed(3)) }}
+              />
             </Flex>
             <Divider color="#DAE3F0" my={4} />
             <Flex w="100%" fontSize="sm" color="grey" align="center">
-              {`Please confirm that you would like to send ${fromAmt} and receive ${toAmt}.`}
+              <FormattedMessage
+                id="CONFIRM_TRANSFER_MSG"
+                values={{
+                  fromAmt,
+                  toAmt,
+                }}
+              />
             </Flex>
           </ModalBody>
           <ModalFooter p={6}>
@@ -148,7 +157,7 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
                 _hover={{ background: '#bfd3f2' }}
                 color="#687D9D"
               >
-                Cancel
+                <FormattedMessage id="CANCEL" />
               </Button>
               <Button
                 px={12}
@@ -156,7 +165,7 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
                 colorScheme="blue"
                 mt={{ base: 2, md: 0 }}
               >
-                Continue
+                <FormattedMessage id="OK" />
               </Button>
             </Flex>
           </ModalFooter>
