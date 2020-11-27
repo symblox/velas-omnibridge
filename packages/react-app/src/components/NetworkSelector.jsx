@@ -21,16 +21,16 @@ const SelectOption = props => {
   return (
     <Flex transition="0.25s" _hover={{ background: 'background' }}>
       <Button
-        background="transparent"
+        background="#1c204e"
         width="100%"
         justifyContent="flex-start"
         fontWeight="normal"
         _hover={{ color: 'blue.500' }}
-        color="grey"
+        color="white"
         onClick={() => onChange(network)}
       >
         {icon}
-        <Text color="black" ml={2}>
+        <Text color="white" ml={2}>
           {label}
         </Text>
       </Button>
@@ -41,7 +41,7 @@ const SelectOption = props => {
 const DropdownIndicator = () => {
   return (
     <Flex align="center" justify="center" paddingLeft="15px">
-      <DownArrowIcon fontSize={8} color="black" />
+      <DownArrowIcon fontSize={8} color="white" />
     </Flex>
   );
 };
@@ -49,14 +49,14 @@ const DropdownIndicator = () => {
 const SelectValue = ({ icon, label }) => (
   <Flex
     cursor="pointer"
-    color="grey"
+    color="white"
     transition="0.25s"
     px={4}
     _hover={{ color: 'blue.500' }}
     align="center"
   >
     {icon}
-    <Text color="black" ml={2} fontWeight="bold">
+    <Text color="white" ml={2} fontWeight="bold">
       {label}
     </Text>
     <DropdownIndicator />
@@ -126,7 +126,7 @@ export const NetworkSelector = props => {
         <PopoverContent
           width="min-content"
           border="1px solid rgba(226,232,240, 0.8)"
-          boxShadow="0 0.5rem 1rem #CADAEF"
+          boxShadow="0 0.5rem 1rem rgb(2 6 33 / 45%)"
         >
           <PopoverBody padding={0}>{selectOptions}</PopoverBody>
         </PopoverContent>

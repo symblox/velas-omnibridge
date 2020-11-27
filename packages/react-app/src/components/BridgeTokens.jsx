@@ -21,8 +21,8 @@ export const BridgeTokens = () => {
     <Flex
       w="calc(100% - 2rem)"
       maxW="75rem"
-      background="white"
-      boxShadow="0px 1rem 2rem rgba(204, 218, 238, 0.8)"
+      background="linear-gradient(#8c71e1,#1f2353)"
+      boxShadow="0px 1rem 2rem rgb(0 0 0 / 23%)"
       borderRadius="1rem"
       direction="column"
       align="center"
@@ -36,7 +36,7 @@ export const BridgeTokens = () => {
           {!smallScreen && (
             <Flex w="100%" justify="space-between">
               <Flex align="flex-start" direction="column">
-                <Text color="greyText" fontSize="sm">
+                <Text color="white" fontSize="sm">
                   From
                 </Text>
                 <Text fontWeight="bold" fontSize="lg">
@@ -45,7 +45,7 @@ export const BridgeTokens = () => {
               </Flex>
               {isERC20Dai && <DaiWarning />}
               <Flex align="flex-end" direction="column">
-                <Text color="greyText" fontSize="sm">
+                <Text color="white" fontSize="sm">
                   To
                 </Text>
                 <Text fontWeight="bold" fontSize="lg" textAlign="right">
@@ -62,7 +62,7 @@ export const BridgeTokens = () => {
             {smallScreen && isERC20Dai && <DaiWarning />}
             {smallScreen && (
               <Flex align="flex-start" direction="column" m={2}>
-                <Text color="greyText" fontSize="sm">
+                <Text color="white" fontSize="sm">
                   From
                 </Text>
                 <Text fontWeight="bold" fontSize="lg">
@@ -83,7 +83,7 @@ export const BridgeTokens = () => {
             </Flex>
             {smallScreen && (
               <Flex align="flex-end" direction="column" m={2}>
-                <Text color="greyText" fontSize="sm">
+                <Text color="white" fontSize="sm">
                   To
                 </Text>
                 <Text fontWeight="bold" fontSize="lg" textAlign="right">

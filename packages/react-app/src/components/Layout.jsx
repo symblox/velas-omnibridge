@@ -16,23 +16,22 @@ export const Layout = ({ children }) => (
     minH="100vh"
     align="center"
     direction="column"
-    background="background"
+    background="#1c204e"
     position="relative"
   >
     <Image
       src={DownTriangle}
       position="absolute"
-      right="min(-15rem, -20%)"
+      left="min(-15rem, -20%)"
       w="60rem"
-      minWidth="30rem"
       opacity={0.99}
     />
     <Image
       src={UpTriangle}
       position="absolute"
-      left="min(-27rem, -20%)"
-      w="81rem"
-      minWidth="60rem"
+      right="min(-17rem, -20%)"
+      w="30rem"
+      minWidth="40rem"
       opacity={0.99}
     />
     <Header />

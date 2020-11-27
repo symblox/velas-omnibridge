@@ -1,14 +1,12 @@
-<svg width="1044" height="626" viewBox="0 0 1044 626" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.5" d="M1044 626L614.162 110.524C566.189 52.9924 477.811 52.9925 429.837 110.524L0 626H1044Z" fill="url(#paint0_linear)"/>
-<path opacity="0.5" d="M908 626L599.281 256.018C559.304 208.108 485.696 208.108 445.719 256.018L137 626H908Z" fill="url(#paint1_linear)"/>
-<defs>
-<linearGradient id="paint0_linear" x1="522" y1="0" x2="522" y2="626" gradientUnits="userSpaceOnUse">
-<stop stop-color="#DBE5F4" stop-opacity="0.8"/>
-<stop offset="1" stop-color="#DBE5F4" stop-opacity="0.1"/>
-</linearGradient>
-<linearGradient id="paint1_linear" x1="522.5" y1="164" x2="522.5" y2="626" gradientUnits="userSpaceOnUse">
-<stop stop-color="#CFDDF2"/>
-<stop offset="1" stop-color="#DBE5F4" stop-opacity="0.1"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="83px" height="82px" viewBox="0 0 83 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Oval</title>
+    <defs>
+        <filter x="-65.2%" y="-65.2%" width="230.4%" height="230.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.088377199">
+        <circle id="Oval" fill="#FFFFFF" filter="url(#filter-1)" cx="41.5" cy="41" r="23"></circle>
+    </g>
 </svg>

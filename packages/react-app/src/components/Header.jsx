@@ -30,15 +30,15 @@ export const Header = () => {
       <Flex justify="space-between" h={20} align="center">
         <Link to="/">
           <Flex justify="space-around" align="center">
-            <Image src={Logo} mr={4} />
-            <Text fontWeight="bold">OmniBridge</Text>
+            <Image src={Logo} mr={2} />
+            <Text fontWeight="bold" color="white">Symblox</Text>
           </Flex>
         </Link>
         <Button
           variant="link"
           // _focus={{ outline: 'none', border: 'none' }}
           display={{ base: 'block', md: 'none' }}
-          color="blue.500"
+          color="#42d9fe"
           _hover={{ color: 'blue.600' }}
           onClick={toggleOpen}
           minW="auto"
@@ -77,12 +77,12 @@ export const Header = () => {
             align="center"
             px={4}
             fontWeight="bold"
-            color="grey"
+            color="white"
             transition="0.25s"
             _hover={{ color: 'blue.500' }}
           >
             <HistoryIcon mr={2} />
-            <Text color="black"> History</Text>
+            <Text color="white"> History</Text>
           </Flex>
         </Link>
         <WalletSelector />
