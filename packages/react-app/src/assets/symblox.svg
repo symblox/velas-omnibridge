@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="345px" height="276px" viewBox="0 0 345 276" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>syx-icon-color copy 2</title>
+    <defs>
+        <linearGradient x1="-39.629257%" y1="120.817617%" x2="91.1756391%" y2="19.4727213%" id="linearGradient-1">
+            <stop stop-color="#FF3A33" offset="0%"></stop>
+            <stop stop-color="#FC06C6" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="88.1064345%" x2="71.1639852%" y2="29.0485745%" id="linearGradient-2">
+            <stop stop-color="#42D9FE" offset="0%"></stop>
+            <stop stop-color="#2872FA" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="syx-icon-color-copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Symblox">
+            <polygon id="Path-9" fill="url(#linearGradient-1)" points="138.425747 0 2.09480581e-12 174.120805 130.957166 174.120805 268.985507 0"></polygon>
+            <polygon id="Path-9" fill="url(#linearGradient-2)" points="189.440239 101.879195 51.0144928 276 181.971658 276 320 101.879195"></polygon>
+        </g>
+    </g>
+</svg>

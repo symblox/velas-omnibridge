@@ -8,7 +8,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/core';
 import React, { useContext, useEffect, useState } from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import DropDown from '../assets/drop-down.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
@@ -123,7 +123,8 @@ export const FromToken = () => {
             </Flex>
             {balance >= 0 && (
               <Text color="grey" mt={{ base: 2, lg: 0 }}>
-                {`Balance: ${formatValue(balance, token.decimals)}`}
+                <FormattedMessage id="BALANCE" />
+                {`: ${formatValue(balance, token.decimals)}`}
               </Text>
             )}
           </Flex>
@@ -155,7 +156,7 @@ export const FromToken = () => {
                 setAmount(balance);
               }}
             >
-              Max
+              <FormattedMessage id="MAX" />
             </Button>
           </Flex>
         </Flex>
