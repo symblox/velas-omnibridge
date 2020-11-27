@@ -22,13 +22,16 @@ import {
 } from '../lib/token';
 import { fetchTokenList } from '../lib/tokenList';
 import { Web3Context } from './Web3Context';
+import { networkOptions } from '../lib/constants';
 
 const POLLING_INTERVAL = 2000;
 
 export const BridgeContext = React.createContext({});
 
 export const BridgeProvider = ({ children }) => {
-  const { ethersProvider, account, providerNetwork } = useContext(Web3Context);
+  const { ethersProvider, account, providerNetwork, setNetwork } = useContext(
+    Web3Context,
+  );
   const [fromToken, setFromToken] = useState();
   const [toToken, setToToken] = useState();
   const [fromAmount, setFromAmount] = useState(0);
@@ -131,7 +134,26 @@ export const BridgeProvider = ({ children }) => {
     }
   }, [fromToken, ethersProvider, fromAmount]);
 
+  const getNetworkOption = networkId => {
+    for (let i = 0; i < networkOptions.length; i++) {
+      const v = networkOptions[i];
+      if (v.value === parseInt(networkId)) {
+        return v;
+      }
+    }
+
+    return networkOptions[0];
+  };
+
   useEffect(() => {
+    if (providerNetwork && providerNetwork.chainId) {
+      setDefaultToken(getNetworkOption(providerNetwork.chainId).value);
+      setNetwork(getNetworkOption(providerNetwork.chainId));
+    } else {
+      setDefaultToken(networkOptions[0].value);
+      setNetwork(networkOptions[0]);
+    }
+
     const subscriptions = [];
     const unsubscribe = () => {
       subscriptions.forEach(s => {
@@ -193,7 +215,17 @@ export const BridgeProvider = ({ children }) => {
     getReceipt();
     // unsubscribe when unmount component
     return unsubscribe;
-  }, [txHash, totalConfirms, ethersProvider, setToken, fromToken, account]);
+  }, [
+    txHash,
+    totalConfirms,
+    ethersProvider,
+    setToken,
+    fromToken,
+    account,
+    setNetwork,
+    setDefaultToken,
+    providerNetwork,
+  ]);
 
   const setDefaultTokenList = useCallback(
     async (chainId, customTokens) => {

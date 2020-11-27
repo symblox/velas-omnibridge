@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/core';
 import { utils } from 'ethers';
 import React, { useContext } from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import Details from '../assets/details.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { formatValue } from '../lib/helpers';
@@ -26,7 +26,9 @@ export const SystemFeedback = () => {
           pb={{ base: 2, md: 0 }}
         >
           <Image src={Details} mr={2} />
-          <Text>System Feedback</Text>
+          <Text>
+            <FormattedMessage id="SYSTEM_FEEDBACK" />
+          </Text>
         </Flex>
       </PopoverTrigger>
       <PopoverContent
@@ -40,7 +42,10 @@ export const SystemFeedback = () => {
         {token && tokenLimits && (
           <PopoverBody width="100%" align="center" fontSize="sm">
             <Flex align="center" justify="space-between">
-              <Text color="grey"> Daily Limit </Text>
+              <Text color="grey">
+                {' '}
+                <FormattedMessage id="DAILY_LIMIT" />{' '}
+              </Text>
               <Text fontWeight="bold" ml={4}>
                 {`${utils.commify(
                   formatValue(tokenLimits.dailyLimit, token.decimals),
@@ -48,7 +53,10 @@ export const SystemFeedback = () => {
               </Text>
             </Flex>
             <Flex align="center" justify="space-between">
-              <Text color="grey"> Maximum per transaction </Text>
+              <Text color="grey">
+                {' '}
+                <FormattedMessage id="MAX_PER_TX" />{' '}
+              </Text>
               <Text fontWeight="bold" ml={4}>
                 {`${utils.commify(
                   formatValue(tokenLimits.maxPerTx, token.decimals),
@@ -56,7 +64,10 @@ export const SystemFeedback = () => {
               </Text>
             </Flex>
             <Flex align="center" justify="space-between">
-              <Text color="grey"> Minimum per transaction </Text>
+              <Text color="grey">
+                {' '}
+                <FormattedMessage id="MIN_PER_TX" />{' '}
+              </Text>
               <Text fontWeight="bold" ml={4}>
                 {`${utils.commify(
                   formatValue(tokenLimits.minPerTx, token.decimals),

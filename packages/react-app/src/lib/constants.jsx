@@ -5,6 +5,19 @@ import { NetworkIcon } from '../icons/NetworkIcon';
 
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000';
 
+export const languageOptions = [
+  {
+    key: 'zh',
+    value: '中文',
+    icon: <NetworkIcon />,
+  },
+  {
+    key: 'en',
+    value: 'EN',
+    icon: <NetworkIcon />,
+  },
+];
+
 export const networkOptions = [
   {
     value: 1,
@@ -22,31 +35,22 @@ export const networkOptions = [
     name: 'VELAS',
     icon: <NetworkIcon />,
   },
-
-  // {
-  //   value: 77,
-  //   key: 2,
-  //   bridge: { chainId: 42, name: 'Kovan Testnet' },
-  //   label: 'Sokol',
-  //   name: 'Sokol Testnet',
-  //   icon: <NetworkIcon />,
-  // },
-  // {
-  //   value: 111,
-  //   key: 0,
-  //   bridge: { chainId: 42, name: 'Kovan Testnet' },
-  //   label: 'VELAS (Testnet)',
-  //   name: 'VELAS Testnet',
-  //   icon: <NetworkIcon />,
-  // },
-  // {
-  //   value: 42,
-  //   key: 1,
-  //   bridge: { chainId: 111, name: 'VELAS Testnet' },
-  //   label: 'Kovan',
-  //   name: 'Kovan Testnet',
-  //   icon: <NetworkIcon />,
-  // },
+  {
+    value: 111,
+    key: 3,
+    bridge: { chainId: 42, name: 'Kovan Testnet' },
+    label: 'VELAS (Testnet)',
+    name: 'VELAS Testnet',
+    icon: <NetworkIcon />,
+  },
+  {
+    value: 42,
+    key: 4,
+    bridge: { chainId: 111, name: 'VELAS Testnet' },
+    label: 'Kovan',
+    name: 'Kovan Testnet',
+    icon: <NetworkIcon />,
+  },
 ];
 
 export const networkNames = {
@@ -127,6 +131,8 @@ export const defaultTokens = {
     symbol: 'USDT',
     decimals: 6,
     chainId: 42,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
   },
   111: {
     name: 'USDT on VELAS',
@@ -134,6 +140,8 @@ export const defaultTokens = {
     symbol: 'USDT',
     decimals: 6,
     chainId: 111,
+    logoURI:
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
   },
   106: {
     name: 'USDT on VELAS',
