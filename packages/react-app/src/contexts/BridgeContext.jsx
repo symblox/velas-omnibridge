@@ -47,6 +47,7 @@ export const BridgeProvider = ({ children }) => {
   const [fromBalance, setFromBalance] = useState();
   const [toBalance, setToBalance] = useState();
   const [tokenLimits, setTokenLimits] = useState();
+  const [lastChainId, setLastChainId] = useState();
 
   const setAmount = useCallback(
     async amount => {
@@ -146,10 +147,11 @@ export const BridgeProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    if (providerNetwork && providerNetwork.chainId) {
+    if (providerNetwork && providerNetwork.chainId && parseInt(providerNetwork.chainId) !== parseInt(lastChainId)) {
       setDefaultToken(getNetworkOption(providerNetwork.chainId).value);
       setNetwork(getNetworkOption(providerNetwork.chainId));
-    } else {
+      setLastChainId(providerNetwork.chainId);
+    } else if(!parseInt(lastChainId)) {
       setDefaultToken(networkOptions[0].value);
       setNetwork(networkOptions[0]);
     }
