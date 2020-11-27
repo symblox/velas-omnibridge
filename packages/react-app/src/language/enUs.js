@@ -1,11 +1,16 @@
 const enUs = {
   LOGO: 'Symblox',
+  CANCEL: 'CANCEL',
+  OK: 'OK',
   FROM: 'From',
   TO: 'To',
   UNLOCKED: 'Unlocked',
   UNLOCK: 'Unlock',
   TRANSFER: 'Transfer',
   CONFIRM_TRANSFER: 'Confirm Transfer',
+  CONFIRM_TRANSFER_MSG:
+    'Please confirm that you would like to send {fromAmt} and receive {toAmt}',
+  BRIDGE_FEES: 'Bridge Fees {fees} %',
   BALANCE: 'Balance',
   MAX: 'Max',
   ERROR: 'Error',
@@ -14,5 +19,12 @@ const enUs = {
   DAILY_LIMIT: 'Daily Limit',
   MAX_PER_TX: 'Maximum per transaction',
   MIN_PER_TX: 'Minimum per transaction',
+  LOADING_MSG: '',
+  WAITING_FOR_CONFIRM: 'Waiting for Block Confirmations',
+  WAITING_FOR_EXECUTION: 'Waiting for Execution',
+  ALM_MONITOR: 'Monitor at ALM',
+  WALLET_CONNECT: 'Connect Wallet',
+  WALLET_DISCONNECT: 'Disconnect',
+  WALLET_CONNECT_TO: 'Connected to {network}',
 };
 export default enUs;

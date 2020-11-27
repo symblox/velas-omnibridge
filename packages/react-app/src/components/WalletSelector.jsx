@@ -10,8 +10,6 @@ import {
 import React, { useContext } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Web3Context } from '../contexts/Web3Context';
-import { ErrorIcon } from '../icons/ErrorIcon';
-import { WalletIcon } from '../icons/WalletIcon';
 import { getNetworkName } from '../lib/helpers';
 
 const getAccountString = account => {
@@ -33,7 +31,7 @@ export const WalletSelector = props => {
       {!account && (
         <Button onClick={connectWeb3} colorScheme="blue">
           {/* <WalletIcon mr={2} /> */}
-          Connect Wallet
+          <FormattedMessage id="WALLET_CONNECT" />
         </Button>
       )}
       {account && (
@@ -60,10 +58,18 @@ export const WalletSelector = props => {
               <Flex justify="space-between" align="center">
                 <Text>
                   {' '}
-                  Connected to {getNetworkName(providerNetwork.chainId)}{' '}
+                  <FormattedMessage
+                    id="WALLET_CONNECT_TO"
+                    values={{
+                      network: getNetworkName(providerNetwork.chainId),
+                    }}
+                  />{' '}
                 </Text>
                 <Button colorScheme="blue" onClick={disconnect}>
-                  <Text> Disconnect </Text>
+                  <Text>
+                    {' '}
+                    <FormattedMessage id="WALLET_DISCONNECT" />
+                  </Text>
                 </Button>
               </Flex>
               {networkMismatch && (

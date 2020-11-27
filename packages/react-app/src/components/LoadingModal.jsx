@@ -9,6 +9,7 @@ import {
   Text,
 } from '@chakra-ui/core';
 import React, { useContext } from 'react';
+import { useIntl, FormattedMessage } from 'react-intl';
 
 import LoadingImage from '../assets/loading.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
@@ -30,6 +31,7 @@ export const LoadingModal = ({ loadingProps }) => {
     receipt,
     totalConfirms,
   } = useContext(BridgeContext);
+  const intl = useIntl();
 
   return (
     <Modal
@@ -98,10 +100,13 @@ export const LoadingModal = ({ loadingProps }) => {
                   align={{ base: 'stretch', md: 'center' }}
                 >
                   <Text width="100%">
-                    {`${loadingText || 'Waiting for Block Confirmations'}...`}
+                    {`${
+                      loadingText ||
+                      intl.formatMessage({ id: 'WAITING_FOR_CONFIRM' })
+                    } ...`}
                   </Text>
                   <Text width="100%" color="grey">
-                    {'Monitor at ALM '}
+                    <FormattedMessage id="ALM_MONITOR" />
                     <Link
                       href={getMonitorUrl(fromToken.chainId, txHash)}
                       rel="noreferrer noopener"

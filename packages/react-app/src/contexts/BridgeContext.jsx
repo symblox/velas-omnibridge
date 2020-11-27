@@ -1,5 +1,7 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 
+import { useIntl } from 'react-intl';
+
 import { getMessageCallStatus, getMessageFromReceipt } from '../lib/amb';
 import {
   fetchToAmount,
@@ -47,6 +49,8 @@ export const BridgeProvider = ({ children }) => {
   const [fromBalance, setFromBalance] = useState();
   const [toBalance, setToBalance] = useState();
   const [tokenLimits, setTokenLimits] = useState();
+  const [lastChainId, setLastChainId] = useState();
+  const intl = useIntl();
 
   const setAmount = useCallback(
     async amount => {
@@ -146,10 +150,15 @@ export const BridgeProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    if (providerNetwork && providerNetwork.chainId) {
+    if (
+      providerNetwork &&
+      providerNetwork.chainId &&
+      parseInt(providerNetwork.chainId) !== parseInt(lastChainId)
+    ) {
       setDefaultToken(getNetworkOption(providerNetwork.chainId).value);
       setNetwork(getNetworkOption(providerNetwork.chainId));
-    } else {
+      setLastChainId(providerNetwork.chainId);
+    } else if (!parseInt(lastChainId)) {
       setDefaultToken(networkOptions[0].value);
       setNetwork(networkOptions[0]);
     }
@@ -174,7 +183,7 @@ export const BridgeProvider = ({ children }) => {
         if (txReceipt) {
           message = getMessageFromReceipt(chainId, txReceipt);
           if (txReceipt.confirmations > totalConfirms) {
-            setLoadingText('Waiting for Execution');
+            setLoadingText(intl.formatMessage({ id: 'WAITING_FOR_EXECUTION' }));
           }
         }
 
@@ -225,6 +234,8 @@ export const BridgeProvider = ({ children }) => {
     setNetwork,
     setDefaultToken,
     providerNetwork,
+    lastChainId,
+    intl,
   ]);
 
   const setDefaultTokenList = useCallback(
