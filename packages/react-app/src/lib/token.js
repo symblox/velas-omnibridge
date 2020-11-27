@@ -61,7 +61,8 @@ export const approveToken = async (ethersProvider, token, amount) => {
   try {
     tx = await tokenContract.approve(mediatorAddress, amount);
   } catch (error) {
-    await tokenContract.approve(mediatorAddress, 0);
+    const approveZeroTx = await tokenContract.approve(mediatorAddress, 0);
+    await approveZeroTx.wait();
     tx = await tokenContract.approve(mediatorAddress, amount);
   }
   return tx.wait();
