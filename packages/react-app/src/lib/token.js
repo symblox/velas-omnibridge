@@ -56,7 +56,15 @@ export const approveToken = async (ethersProvider, token, amount) => {
     ethersProvider.getSigner(),
   );
   const mediatorAddress = getMediatorAddress(token.address, token.chainId);
-  const tx = await tokenContract.approve(mediatorAddress, amount);
+
+  let tx;
+  try {
+    tx = await tokenContract.approve(mediatorAddress, amount);
+  } catch (error) {
+    const approveZeroTx = await tokenContract.approve(mediatorAddress, 0);
+    await approveZeroTx.wait();
+    tx = await tokenContract.approve(mediatorAddress, amount);
+  }
   return tx.wait();
 };
 
