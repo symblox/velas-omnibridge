@@ -36,13 +36,8 @@ export const BridgeTokens = () => {
           {!smallScreen && (
             <Flex w="100%" justify="space-between">
               <Flex align="flex-start" direction="column">
-<<<<<<< HEAD
-                <Text color="white" fontSize="sm">
-                  From
-=======
                 <Text color="greyText" fontSize="sm">
                   <FormattedMessage id="FROM" />
->>>>>>> 320d3149a9629193d0a5d00031b1cd505365781a
                 </Text>
                 <Text fontWeight="bold" fontSize="lg">
                   {network.name}
@@ -50,13 +45,8 @@ export const BridgeTokens = () => {
               </Flex>
               {isERC20Dai && <DaiWarning />}
               <Flex align="flex-end" direction="column">
-<<<<<<< HEAD
-                <Text color="white" fontSize="sm">
-                  To
-=======
                 <Text color="greyText" fontSize="sm">
                   <FormattedMessage id="TO" />
->>>>>>> 320d3149a9629193d0a5d00031b1cd505365781a
                 </Text>
                 <Text fontWeight="bold" fontSize="lg" textAlign="right">
                   {network.bridge.name}
@@ -72,13 +62,8 @@ export const BridgeTokens = () => {
             {smallScreen && isERC20Dai && <DaiWarning />}
             {smallScreen && (
               <Flex align="flex-start" direction="column" m={2}>
-<<<<<<< HEAD
-                <Text color="white" fontSize="sm">
-                  From
-=======
                 <Text color="greyText" fontSize="sm">
                   <FormattedMessage id="FROM" />
->>>>>>> 320d3149a9629193d0a5d00031b1cd505365781a
                 </Text>
                 <Text fontWeight="bold" fontSize="lg">
                   {network.name}
@@ -98,13 +83,8 @@ export const BridgeTokens = () => {
             </Flex>
             {smallScreen && (
               <Flex align="flex-end" direction="column" m={2}>
-<<<<<<< HEAD
-                <Text color="white" fontSize="sm">
-                  To
-=======
                 <Text color="greyText" fontSize="sm">
                   <FormattedMessage id="TO" />
->>>>>>> 320d3149a9629193d0a5d00031b1cd505365781a
                 </Text>
                 <Text fontWeight="bold" fontSize="lg" textAlign="right">
                   {network.bridge.name}
