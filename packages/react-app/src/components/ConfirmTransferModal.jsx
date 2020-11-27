@@ -32,9 +32,9 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
   }, [fromAmount, toAmount]);
   const isxDai = isxDaiChain(fromToken.chainId);
   const fromAmt = formatValue(fromAmount, fromToken.decimals);
-  const fromUnit = fromToken.symbol + (isxDai ? ' on xDai' : '');
+  const fromUnit = fromToken.symbol + (isxDai ? ' on VELAS' : '');
   const toAmt = formatValue(toAmount, toToken.decimals);
-  const toUnit = toToken.symbol + (isxDai ? '' : ' on xDai');
+  const toUnit = toToken.symbol + (isxDai ? '' : ' on VELAS');
   const isERC20Dai = isERC20DaiAddress(fromToken);
 
   const onClick = () => {
