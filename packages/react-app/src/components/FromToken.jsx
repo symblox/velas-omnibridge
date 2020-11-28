@@ -71,7 +71,9 @@ export const FromToken = () => {
       m={{ base: 2, lg: 0 }}
       mr={{ base: 2, lg: -6 }}
       position="relative"
+      color="black"
       borderRadius="0.25rem"
+      background={{ base: 'white', lg: 'none' }}
       border={{ base: '1px solid #DAE3F0', lg: 'none' }}
       minH={8}
     >
@@ -122,7 +124,7 @@ export const FromToken = () => {
               <Image src={DropDown} cursor="pointer" />
             </Flex>
             {balance >= 0 && (
-              <Text color="grey" mt={{ base: 2, lg: 0 }}>
+              <Text color="black" mt={{ base: 2, lg: 0 }}>
                 <FormattedMessage id="BALANCE" />
                 {`: ${formatValue(balance, token.decimals)}`}
               </Text>
@@ -137,6 +139,7 @@ export const FromToken = () => {
               placeholder="0.000"
               textAlign="left"
               fontWeight="bold"
+              color="black"
               onChange={e => {
                 setInput(e.target.value);
                 setAmount(parseValue(e.target.value, token.decimals));

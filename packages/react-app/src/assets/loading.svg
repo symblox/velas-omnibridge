@@ -1,3 +1,27 @@
-<svg width="126" height="82" viewBox="0 0 126 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 6.12468C0 0.537767 7.0881 -2.12093 10.9616 2.01305L58.3384 52.5754C60.838 55.2431 65.162 55.2431 67.6616 52.5754L115.038 2.01305C118.912 -2.12092 126 0.537767 126 6.12468V69.7752C126 76.5268 120.359 82 113.4 82H12.6C5.64122 82 0 76.5268 0 69.7752V6.12468Z" fill="white"/>
+<svg width="120px" height="120px" viewBox="0 0 138 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="-45.9089503%" y1="75.168989%" x2="84.9339227%" y2="32.3194403%" id="linearGradient-1">
+            <stop stop-color="#FF3A33" offset="0%"></stop>
+            <stop stop-color="#FC06C6" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-3.86269316%" y1="62.5540517%" x2="67.4273731%" y2="37.5450901%" id="linearGradient-2">
+            <stop stop-color="#42D9FE" offset="0%"></stop>
+            <stop stop-color="#2872FA" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo_White">
+            <g id="Page-1" transform="translate(15.000000, 23.000000)">
+                <g id="Symblox-Dapp-Home">
+                    <g id="Group-20">
+                        <g id="Group-19">
+                            <polygon id="Path-9" fill="url(#linearGradient-1)" points="46.6 0.03 0 58.73 44.1 58.73 90.5 0.03"></polygon>
+                            <polygon id="Path" fill="url(#linearGradient-2)" points="63.7 34.23 17.1 93.03 61.2 93.03 107.7 34.23"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <circle id="Oval" cx="69" cy="69" r="69"></circle>
+        </g>
+    </g>
 </svg>

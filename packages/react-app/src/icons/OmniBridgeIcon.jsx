@@ -2,12 +2,14 @@ import { createIcon } from '@chakra-ui/icon';
 import * as React from 'react';
 
 export const OmniBridgeIcon = createIcon({
-  displayName: 'OmniBridgeIcon',
+ displayName: 'OmniBridgeIcon',
   path: (
-    <path
-      d="M0 2.47305C0 1.10885 1.73287 0.459654 2.67986 1.46908L14.2624 13.8153C14.8734 14.4667 15.9306 14.4667 16.5417 13.8153L28.1242 1.46908C29.0711 0.459656 30.804 1.10885 30.804 2.47305V18.0151C30.804 19.6637 29.4249 21.0002 27.7236 21.0002H3.0804C1.37914 21.0002 0 19.6637 0 18.0151V2.47305Z"
-      fill="currentColor"
-    />
+    <g id="symblox" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Group-19" transform="translate(6.000000, 7.000000)">
+            <polygon id="Path-9" fill="#fd19af" points="8.65160917 0 1.30925363e-13 11.3501787 8.18482285 11.3501787 16.8115942 0"></polygon>
+            <polygon id="Path-9" fill="#3296fc" points="11.840015 6.641062 3.1884058 17.9912407 11.3732286 17.9912407 20 6.641062"></polygon>
+        </g>
+    </g>
   ),
-  viewBox: '0 0 31 21',
+  viewBox: '0 0 32 32',
 });

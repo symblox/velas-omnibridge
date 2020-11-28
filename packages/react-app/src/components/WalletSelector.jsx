@@ -8,7 +8,7 @@ import {
   Text,
 } from '@chakra-ui/core';
 import React, { useContext } from 'react';
-import { FormattedMessage } from 'react-intl';
+
 import { Web3Context } from '../contexts/Web3Context';
 import { ErrorIcon } from '../icons/ErrorIcon';
 import { WalletIcon } from '../icons/WalletIcon';
@@ -31,44 +31,44 @@ export const WalletSelector = props => {
   return (
     <Flex {...props}>
       {!account && (
-        <Button onClick={connectWeb3} colorScheme="blue">
-          {/* <WalletIcon mr={2} /> */}
+        <Button onClick={connectWeb3} colorScheme="blue" borderRadius="10rem">
+          <WalletIcon mr={2} />
           Connect Wallet
         </Button>
       )}
       {account && (
         <Popover placement="bottom-end">
           <PopoverTrigger>
-            <Button colorScheme={networkMismatch ? 'red' : 'blue'}>
-              {/* {networkMismatch ? (
+            <Button colorScheme={networkMismatch ? 'red' : 'blue'} borderRadius="10rem">
+              {networkMismatch ? (
                 <ErrorIcon size={4} mr={2} color="white" />
               ) : (
                 <WalletIcon mr={2} />
-              )} */}
+              )}
               <Text> {getAccountString(account)} </Text>
             </Button>
           </PopoverTrigger>
           <PopoverContent
-            boxShadow="0 0.5rem 1rem #CADAEF"
+            boxShadow="0px 1rem 2rem rgb(0 0 0 / 23%)"
             border="none"
             width="auto"
             // _focus={{ border: 'none', outline: 'none' }}
             right={0}
             maxW="25rem"
           >
-            <PopoverBody width="100%" align="center" p={4}>
+            <PopoverBody width="100%" align="center" p={4} background="#14163c">
               <Flex justify="space-between" align="center">
-                <Text>
+                <Text color="white">
                   {' '}
                   Connected to {getNetworkName(providerNetwork.chainId)}{' '}
                 </Text>
-                <Button colorScheme="blue" onClick={disconnect}>
+                <Button colorScheme="blue" onClick={disconnect} borderRadius="10rem">
                   <Text> Disconnect </Text>
                 </Button>
               </Flex>
               {networkMismatch && (
                 <Text textAlign="left" mt={4} color="red.500" fontWeight="bold">
-                  <FormattedMessage id="NETWORK_SWITCH_TIP" /> {network.name}
+                  Please switch wallet to {network.name}
                 </Text>
               )}
             </PopoverBody>

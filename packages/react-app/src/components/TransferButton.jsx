@@ -82,11 +82,18 @@ export const TransferButton = () => {
       {isOpen && !message && (
         <ConfirmTransferModal isOpen={isOpen} onClose={onClose} />
       )}
-      <svg width="100%" viewBox="0 0 156 42" fill="none">
-        <path
-          d="M16.914 2.28A4 4 0 0120.526 0h114.948a4 4 0 013.612 2.28l16.19 34c1.264 2.655-.671 5.72-3.611 5.72H4.335C1.395 42-.54 38.935.724 36.28l16.19-34z"
-          fill="currentColor"
-        />
+      <svg width="100%" height="50px" viewBox="0 0 81 25" version="1.1">
+          <defs>
+              <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-1">
+                  <stop stop-color="#2872FA" offset="0%"></stop>
+                  <stop stop-color="#42D9FE" offset="100%"></stop>
+              </linearGradient>
+          </defs>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="SVG-Layer" transform="translate(-7.209058, -96.966446)" fill="url(#linearGradient-1)">
+                  <path d="M20.0967601,96.966446 L75.3213563,96.966446 C76.4751217,96.966446 77.5266553,97.6281067 78.0259255,98.6682528 L87.8336364,119.100984 C88.3116179,120.096779 87.8918473,121.291511 86.8960524,121.769492 C86.6259581,121.899137 86.330188,121.966446 86.0305903,121.966446 L9.38752613,121.966446 C8.28295663,121.966446 7.38752613,121.071016 7.38752613,119.966446 C7.38752613,119.666848 7.45483477,119.371078 7.58448002,119.100984 L17.3921909,98.6682528 C17.8914611,97.6281067 18.9429947,96.966446 20.0967601,96.966446 Z" id="Rectangle"></path>
+              </g>
+          </g>
       </svg>
       <Flex
         position="absolute"

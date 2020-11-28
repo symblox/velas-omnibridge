@@ -25,6 +25,7 @@ const SelectOption = props => {
         width="100%"
         justifyContent="flex-start"
         fontWeight="normal"
+        borderRadius="0"
         _hover={{ color: 'blue.500' }}
         color="white"
         onClick={() => onChange(network)}
@@ -119,13 +120,14 @@ export const NetworkSelector = props => {
             background="transparent"
             _hover={{ background: 'transparent' }}
             onClick={handleOpen}
+            borderRadius="0"
           >
             <SelectValue {...currentNetwork} />
           </Button>
         </PopoverTrigger>
         <PopoverContent
           width="min-content"
-          border="1px solid rgba(226,232,240, 0.8)"
+          border="0"
           boxShadow="0 0.5rem 1rem rgb(2 6 33 / 45%)"
         >
           <PopoverBody padding={0}>{selectOptions}</PopoverBody>

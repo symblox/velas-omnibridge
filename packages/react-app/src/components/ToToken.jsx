@@ -39,7 +39,7 @@ export const ToToken = () => {
         <svg width="100%" viewBox="0 0 381 94" fill="none">
           <path
             d="M20.806 4.484A8 8 0 0127.992 0H373a8 8 0 018 8v78a8 8 0 01-8 8H27.992a8 8 0 01-7.186-4.484l-19.085-39a8 8 0 010-7.032l19.085-39z"
-            fill="#EEF4FD"
+            fill="#fff"
           />
         </svg>
       )}
@@ -73,19 +73,19 @@ export const ToToken = () => {
               >
                 <Logo uri={token.logoURI} reverseFallback />
               </Flex>
-              <Text fontSize="lg" fontWeight="bold">
+              <Text fontSize="lg" fontWeight="bold" color="black">
                 {token.name}
               </Text>
             </Flex>
             {balance >= 0 && (
-              <Text color="grey" mt={{ base: 2, lg: 0 }}>
+              <Text color="black" mt={{ base: 2, lg: 0 }}>
                 <FormattedMessage id="BALANCE" />
                 {`: ${formatValue(balance, token.decimals)}`}
               </Text>
             )}
           </Flex>
           <Flex align="flex-end" flex={1}>
-            <Text fontWeight="bold" fontSize="2xl">
+            <Text fontWeight="bold" fontSize="2xl" color="black">
               {formatValue(amount, token.decimals)}
             </Text>
           </Flex>

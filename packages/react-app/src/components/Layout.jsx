@@ -1,4 +1,4 @@
-import { Flex, Image } from '@chakra-ui/core';
+import { Flex, Image, Text } from '@chakra-ui/core';
 import React from 'react';
 
 import DownTriangle from '../assets/down-triangle.svg';
@@ -14,9 +14,10 @@ export const Layout = ({ children }) => (
     fontFamily="body"
     w="100%"
     minH="100vh"
+    color="grey"
     align="center"
     direction="column"
-    background="#1c204e"
+    background="radial-gradient(51.87% 46.24% at 103.96% 53.74%,#593ca4 0,#1c1f4e 96.32%)"
     position="relative"
   >
     <Image
@@ -24,14 +25,6 @@ export const Layout = ({ children }) => (
       position="absolute"
       left="min(-15rem, -20%)"
       w="60rem"
-      opacity={0.99}
-    />
-    <Image
-      src={UpTriangle}
-      position="absolute"
-      right="min(-17rem, -20%)"
-      w="30rem"
-      minWidth="40rem"
       opacity={0.99}
     />
     <Header />

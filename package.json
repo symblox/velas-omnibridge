@@ -29,8 +29,7 @@
     "format": "prettier --ignore-path .gitignore --write \"{*,**/*}.{ts,tsx,js,jsx,json,yml,yaml,md}\""
   },
   "husky": {
-    "hooks": {
-    }
+    "hooks": {}
   },
   "workspaces": {
     "nohoist": [
@@ -57,5 +56,8 @@
   "lint-staged": {
     "*.{js,jsx}": "eslint --fix",
     "*.{ts,tsx,js,jsx,json,yml,yaml,md}": "prettier --write"
+  },
+  "dependencies": {
+    "react-intl": "^5.10.6"
   }
 }
