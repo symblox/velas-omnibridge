@@ -1,4 +1,5 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react';
+import { BigNumber } from 'ethers';
 
 import { useIntl } from 'react-intl';
 
@@ -66,7 +67,7 @@ export const BridgeProvider = ({ children }) => {
           fromToken.address,
           ethersProvider,
         );
-        setAllowed(window.BigInt(gotAllowance) >= window.BigInt(amount));
+        setAllowed(BigNumber.from(gotAllowance).gte(amount));
       }
     },
     [account, fromToken, toToken, ethersProvider],
@@ -255,21 +256,22 @@ export const BridgeProvider = ({ children }) => {
           ),
         );
         const tokenListWithBalance = await Promise.all(
-          customTokenList.map(async token => ({
-            ...token,
-            balance: await fetchTokenBalanceWithProvider(
-              ethersProvider,
-              token,
-              account,
-            ),
-          })),
+          customTokenList.map(async token => {
+            return Object.assign(token, {
+              balance: await fetchTokenBalanceWithProvider(
+                ethersProvider,
+                token,
+                account,
+              ),
+            });
+          }),
         );
         const sortedTokenList = tokenListWithBalance.sort(function checkBalance(
           { balance: balanceA },
           { balance: balanceB },
         ) {
           return parseInt(
-            window.BigInt(balanceB) - window.BigInt(balanceA),
+            BigNumber.from(balanceB) - BigNumber.from(balanceA),
             10,
           );
         });

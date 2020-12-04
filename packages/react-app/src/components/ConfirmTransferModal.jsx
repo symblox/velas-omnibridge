@@ -12,7 +12,7 @@ import {
   ModalOverlay,
   Text,
   useBreakpointValue,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import React, { useContext, useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import TransferImage from '../assets/confirm-transfer.svg';

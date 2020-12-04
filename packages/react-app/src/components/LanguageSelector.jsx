@@ -6,7 +6,7 @@ import {
   PopoverContent,
   PopoverTrigger,
   Text,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import React, { useContext } from 'react';
 
 import { LanguageContext } from '../contexts/LanguageContext';
@@ -72,7 +72,7 @@ export const LanguageSelector = props => {
   const handleOpen = isOpen ? close : open;
 
   return (
-    <Flex {...props}>
+    <Flex>
       <Popover isOpen={isOpen} onClose={close} placement="bottom">
         <PopoverTrigger>
           <Button
@@ -81,7 +81,7 @@ export const LanguageSelector = props => {
             _hover={{ background: 'transparent' }}
             onClick={handleOpen}
           >
-            <SelectValue {...language} />
+            <SelectValue icon={language.icon} value={language.value} />
           </Button>
         </PopoverTrigger>
         <PopoverContent

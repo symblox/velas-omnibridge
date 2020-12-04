@@ -1,5 +1,5 @@
-import { Flex, Grid, Text, useBreakpointValue } from '@chakra-ui/core';
 import React, { useContext } from 'react';
+import { Flex, Grid, Text, useBreakpointValue } from '@chakra-ui/react';
 import { FormattedMessage } from 'react-intl';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';

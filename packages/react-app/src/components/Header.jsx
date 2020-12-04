@@ -1,4 +1,4 @@
-import { Flex, Image, Stack, Text } from '@chakra-ui/core';
+import { Flex, Image, Stack, Text } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';

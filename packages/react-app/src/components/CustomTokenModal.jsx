@@ -11,7 +11,7 @@ import {
   ModalHeader,
   ModalOverlay,
   Text,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { utils } from 'ethers';
 import React, { useContext, useRef, useState } from 'react';
 
@@ -69,17 +69,16 @@ export const CustomTokenModal = ({ isOpen, onClose, onBack }) => {
         fetchTokenDetails(network.value, tokenAddress)
           .then(tokenDetails => {
             setAddressInvalid(false);
-            setCustomToken({
-              ...customToken,
-              ...tokenDetails,
-            });
+            setCustomToken(Object.assign(customToken, tokenDetails));
           })
           .catch(() => setAddressInvalid(true));
       } else {
         setAddressInvalid(true);
       }
     } else {
-      setCustomToken({ ...customToken, [e.target.id]: e.target.value });
+      setCustomToken(
+        Object.assign(customToken, { [e.target.id]: e.target.value }),
+      );
     }
   };
 

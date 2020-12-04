@@ -1,4 +1,4 @@
-import ethers from 'ethers';
+import { ethers } from 'ethers';
 
 import { ADDRESS_ZERO } from './constants';
 import { getMediatorAddress } from './helpers';

@@ -1,5 +1,7 @@
-import { Flex, Image, Text, useDisclosure } from '@chakra-ui/core';
+import { Flex, Image, Text, useDisclosure } from '@chakra-ui/react';
 import React, { useContext, useState } from 'react';
+import { BigNumber } from 'ethers';
+
 import { FormattedMessage } from 'react-intl';
 import TransferIcon from '../assets/transfer.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
@@ -24,9 +26,9 @@ export const TransferButton = () => {
     if (
       ethersProvider &&
       !networkMismatch &&
-      window.BigInt(amount) >= window.BigInt(tokenLimits.minPerTx) &&
-      window.BigInt(amount) < window.BigInt(tokenLimits.maxPerTx) &&
-      window.BigInt(balance) >= window.BigInt(amount)
+      BigNumber.from(amount).gte(tokenLimits.minPerTx) &&
+      BigNumber.from(amount).lt(tokenLimits.maxPerTx) &&
+      BigNumber.from(balance).gte(amount)
     ) {
       return onOpen();
     }
@@ -39,21 +41,21 @@ export const TransferButton = () => {
           values={{ network: network.name }}
         />,
       );
-    } else if (window.BigInt(amount) < window.BigInt(tokenLimits.minPerTx)) {
+    } else if (BigNumber.from(amount).lt(tokenLimits.minPerTx)) {
       setMessage(
         <FormattedMessage
           id="TRANSFER_AMOUNT_TOO_SMALL"
           values={{ amount: formatValue(tokenLimits.minPerTx, token.decimals) }}
         />,
       );
-    } else if (window.BigInt(amount) >= window.BigInt(tokenLimits.maxPerTx)) {
+    } else if (BigNumber.from(amount).gte(tokenLimits.maxPerTx)) {
       setMessage(
         <FormattedMessage
           id="TRANSFER_AMOUNT_TOO_LARGE"
           values={{ amount: formatValue(tokenLimits.maxPerTx, token.decimals) }}
         />,
       );
-    } else if (window.BigInt(balance) < window.BigInt(amount)) {
+    } else if (BigNumber.from(balance).lt(amount)) {
       setMessage(<FormattedMessage id="TRANSFER_NOT_ENOUGH_BAL" />);
     }
     return onOpen();

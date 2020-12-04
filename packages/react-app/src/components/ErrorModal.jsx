@@ -6,7 +6,7 @@ import {
   ModalContent,
   ModalOverlay,
   Text,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { ErrorIcon } from '../icons/ErrorIcon';

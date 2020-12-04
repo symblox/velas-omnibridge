@@ -1,4 +1,4 @@
-import { Contract } from 'ethers';
+import { Contract, BigNumber } from 'ethers';
 
 import { fetchConfirmations } from './amb';
 import {
@@ -61,7 +61,7 @@ export const fetchToAmount = async (fromToken, toToken, fromAmount) => {
       tokenAddress,
       fromAmount,
     );
-    return window.BigInt(fromAmount) - window.BigInt(fee);
+    return BigNumber.from(fromAmount) - BigNumber.from(fee);
   } catch (error) {
     // eslint-disable-next-line
     console.log({ amountError: error });

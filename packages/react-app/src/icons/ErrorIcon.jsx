@@ -1,7 +1,7 @@
-import { Flex } from '@chakra-ui/core';
+import { Flex } from '@chakra-ui/react';
 import React from 'react';
 
-export const ErrorIcon = ({ size, ...props }) => {
+export const ErrorIcon = ({ size, mr, color }) => {
   const borderWidth = size * 0.25;
   return (
     <Flex
@@ -15,7 +15,7 @@ export const ErrorIcon = ({ size, ...props }) => {
       borderRadius="50%"
       borderColor="currentColor"
       color="currentColor"
-      {...props}
+      mr={mr}
     >
       <svg width="55%" height="55%" viewBox="0 0 18 18" fill="none">
         <path

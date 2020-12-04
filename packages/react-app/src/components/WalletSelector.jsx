@@ -6,11 +6,13 @@ import {
   PopoverContent,
   PopoverTrigger,
   Text,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import React, { useContext } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Web3Context } from '../contexts/Web3Context';
 import { getNetworkName } from '../lib/helpers';
+import { ErrorIcon } from '../icons/ErrorIcon';
+import { WalletIcon } from '../icons/WalletIcon';
 
 const getAccountString = account => {
   const len = account.length;
@@ -27,7 +29,7 @@ export const WalletSelector = props => {
     networkMismatch,
   } = useContext(Web3Context);
   return (
-    <Flex {...props}>
+    <Flex>
       {!account && (
         <Button onClick={connectWeb3} colorScheme="blue">
           {/* <WalletIcon mr={2} /> */}
@@ -38,11 +40,11 @@ export const WalletSelector = props => {
         <Popover placement="bottom-end">
           <PopoverTrigger>
             <Button colorScheme={networkMismatch ? 'red' : 'blue'}>
-              {/* {networkMismatch ? (
+              {networkMismatch ? (
                 <ErrorIcon size={4} mr={2} color="white" />
               ) : (
                 <WalletIcon mr={2} />
-              )} */}
+              )}
               <Text> {getAccountString(account)} </Text>
             </Button>
           </PopoverTrigger>

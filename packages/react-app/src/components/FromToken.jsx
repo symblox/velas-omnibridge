@@ -1,4 +1,4 @@
-import { Button, Flex, Input, Text, useDisclosure } from '@chakra-ui/core';
+import { Button, Flex, Input, Text, useDisclosure } from '@chakra-ui/react';
 import React, { useContext, useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { BridgeContext } from '../contexts/BridgeContext';
