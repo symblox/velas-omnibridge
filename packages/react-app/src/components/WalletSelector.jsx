@@ -37,7 +37,7 @@ export const WalletSelector = props => {
         </Button>
       )}
       {account && (
-        <Popover placement="bottom-end">
+        <Popover placement="bottom" width="15rem">
           <PopoverTrigger>
             <Button colorScheme={networkMismatch ? 'red' : 'blue'}>
               {networkMismatch ? (
@@ -54,12 +54,11 @@ export const WalletSelector = props => {
             width="auto"
             // _focus={{ border: 'none', outline: 'none' }}
             right={0}
-            maxW="25rem"
+            maxW="20rem"
           >
-            <PopoverBody width="100%" align="center" p={4}>
-              <Flex justify="space-between" align="center">
+            <PopoverBody width="100%" align="center" p={2}>
+              <Flex justify="space-between" align="center" mr={2}>
                 <Text>
-                  {' '}
                   <FormattedMessage
                     id="WALLET_CONNECT_TO"
                     values={{
