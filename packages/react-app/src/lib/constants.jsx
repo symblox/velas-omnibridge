@@ -8,7 +8,7 @@ export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000';
 export const languageOptions = [
   {
     key: 'zh',
-    value: '中文',
+    value: '中',
     icon: <NetworkIcon />,
   },
   {

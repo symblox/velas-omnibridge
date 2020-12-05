@@ -8,7 +8,7 @@ import { languageOptions } from '../lib/constants';
 export const LanguageContext = React.createContext({});
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(languageOptions[1]);//default en
+  const [language, setLanguage] = useState(languageOptions[1]); //default en
   useEffect(() => {
     const browserLang = navigator.language.toLowerCase();
     if (browserLang === 'zh-cn') {
@@ -28,7 +28,7 @@ export const LanguageProvider = ({ children }) => {
     >
       <IntlProvider
         locale={'en'}
-        messages={language.value === '中文' ? zhCn : enUs}
+        messages={language.key === 'zh' ? zhCn : enUs}
       >
         {children}
       </IntlProvider>

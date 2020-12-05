@@ -1,6 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
 
-export const theme = extendTheme({
+export const overrides = {
   colors: {
     blue: {
       50: '#edf9ff',
@@ -46,4 +46,18 @@ export const theme = extendTheme({
   fonts: {
     body: 'Roboto, sans-serif',
   },
-});
+  components: {
+    Popover: {
+      parts: ['popper'],
+      baseStyle: props => ({
+        popper: {
+          zIndex: 10,
+          maxW: props.width ? props.width : 'xs',
+          w: '100%',
+        },
+      }),
+    },
+  },
+};
+
+export default extendTheme(overrides);

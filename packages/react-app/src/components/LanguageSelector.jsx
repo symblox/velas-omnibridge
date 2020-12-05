@@ -41,7 +41,7 @@ const SelectValue = ({ icon, value }) => (
     cursor="pointer"
     color="grey"
     transition="0.25s"
-    px={4}
+    px={2}
     _hover={{ color: 'blue.500' }}
     align="center"
   >
@@ -73,10 +73,17 @@ export const LanguageSelector = props => {
 
   return (
     <Flex>
-      <Popover isOpen={isOpen} onClose={close} placement="bottom">
+      <Popover
+        isOpen={isOpen}
+        onClose={close}
+        placement="bottom-end"
+        returnFocusOnClose={false}
+        width="5rem"
+      >
         <PopoverTrigger>
           <Button
             p={0}
+            mr={4}
             background="transparent"
             _hover={{ background: 'transparent' }}
             onClick={handleOpen}
@@ -89,7 +96,7 @@ export const LanguageSelector = props => {
           border="1px solid rgba(226,232,240, 0.8)"
           boxShadow="0 0.5rem 1rem #CADAEF"
         >
-          <PopoverBody padding={0}>{selectOptions}</PopoverBody>
+          <PopoverBody p={0}>{selectOptions}</PopoverBody>
         </PopoverContent>
       </Popover>
     </Flex>
