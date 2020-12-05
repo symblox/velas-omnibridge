@@ -1,5 +1,6 @@
-import { Flex, Image, Text, useDisclosure } from '@chakra-ui/core';
+import { Flex, Image, Text, useDisclosure } from '@chakra-ui/react';
 import React, { useContext, useState } from 'react';
+import { BigNumber } from 'ethers';
 import { FormattedMessage } from 'react-intl';
 import UnlockIcon from '../assets/unlock.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
@@ -21,8 +22,8 @@ export const UnlockButton = () => {
     if (
       ethersProvider &&
       !networkMismatch &&
-      window.BigInt(amount) > 0 &&
-      window.BigInt(balance) >= window.BigInt(amount)
+      BigNumber.from(amount) > 0 &&
+      BigNumber.from(balance).gte(amount)
     ) {
       return approve();
     }
@@ -30,9 +31,9 @@ export const UnlockButton = () => {
       setMessage('Please connect wallet');
     } else if (networkMismatch) {
       setMessage(`Please switch wallet to ${network.name}`);
-    } else if (window.BigInt(amount) <= 0) {
+    } else if (BigNumber.from(amount).lte(0)) {
       setMessage('Please specify amount');
-    } else if (window.BigInt(balance) < window.BigInt(amount)) {
+    } else if (BigNumber.from(balance).lt(amount)) {
       setMessage('Not enough balance');
     }
     return onOpen();

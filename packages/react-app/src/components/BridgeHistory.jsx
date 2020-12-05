@@ -1,4 +1,4 @@
-import { Flex, Grid, Text } from '@chakra-ui/core';
+import { Flex, Grid, Text } from '@chakra-ui/react';
 import React, { useContext, useEffect, useState } from 'react';
 
 import { Web3Context } from '../contexts/Web3Context';

@@ -6,7 +6,7 @@ import {
   PopoverContent,
   PopoverTrigger,
   Text,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import React, { useContext, useEffect, useState } from 'react';
 
 import { BridgeContext } from '../contexts/BridgeContext';
@@ -111,7 +111,7 @@ export const NetworkSelector = props => {
   const handleOpen = isOpen ? close : open;
 
   return (
-    <Flex {...props}>
+    <Flex>
       <Popover isOpen={isOpen} onClose={close} placement="bottom">
         <PopoverTrigger>
           <Button
@@ -120,7 +120,10 @@ export const NetworkSelector = props => {
             _hover={{ background: 'transparent' }}
             onClick={handleOpen}
           >
-            <SelectValue {...currentNetwork} />
+            <SelectValue
+              icon={currentNetwork.icon}
+              label={currentNetwork.label}
+            />
           </Button>
         </PopoverTrigger>
         <PopoverContent

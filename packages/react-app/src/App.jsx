@@ -1,4 +1,4 @@
-import { ChakraProvider, CSSReset } from '@chakra-ui/core';
+import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ import { BridgeProvider } from './contexts/BridgeContext';
 import { Web3Provider } from './contexts/Web3Context';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { Routes } from './Routes';
-import { theme } from './theme';
+import theme from './theme';
 
 export const App = () => {
   return (

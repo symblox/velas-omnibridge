@@ -7,7 +7,7 @@ import {
   ModalContent,
   ModalOverlay,
   Text,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import React, { useContext } from 'react';
 import { useIntl, FormattedMessage } from 'react-intl';
 

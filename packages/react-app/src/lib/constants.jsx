@@ -8,7 +8,7 @@ export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000';
 export const languageOptions = [
   {
     key: 'zh',
-    value: '中文',
+    value: '中',
     icon: <NetworkIcon />,
   },
   {
@@ -55,7 +55,7 @@ export const networkOptions = [
 
 export const networkNames = {
   100: 'xDai Chain',
-  1: 'ETH Mainnet',
+  1: 'Ethereum',
   77: 'Sokol Testnet',
   42: 'Kovan Testnet',
   111: 'Velas Testnet',

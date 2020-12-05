@@ -6,11 +6,13 @@ import {
   PopoverContent,
   PopoverTrigger,
   Text,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import React, { useContext } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Web3Context } from '../contexts/Web3Context';
 import { getNetworkName } from '../lib/helpers';
+import { ErrorIcon } from '../icons/ErrorIcon';
+import { WalletIcon } from '../icons/WalletIcon';
 
 const getAccountString = account => {
   const len = account.length;
@@ -27,7 +29,7 @@ export const WalletSelector = props => {
     networkMismatch,
   } = useContext(Web3Context);
   return (
-    <Flex {...props}>
+    <Flex>
       {!account && (
         <Button onClick={connectWeb3} colorScheme="blue">
           {/* <WalletIcon mr={2} /> */}
@@ -35,14 +37,14 @@ export const WalletSelector = props => {
         </Button>
       )}
       {account && (
-        <Popover placement="bottom-end">
+        <Popover placement="bottom" width="15rem">
           <PopoverTrigger>
             <Button colorScheme={networkMismatch ? 'red' : 'blue'}>
-              {/* {networkMismatch ? (
+              {networkMismatch ? (
                 <ErrorIcon size={4} mr={2} color="white" />
               ) : (
                 <WalletIcon mr={2} />
-              )} */}
+              )}
               <Text> {getAccountString(account)} </Text>
             </Button>
           </PopoverTrigger>
@@ -52,12 +54,11 @@ export const WalletSelector = props => {
             width="auto"
             // _focus={{ border: 'none', outline: 'none' }}
             right={0}
-            maxW="25rem"
+            maxW="20rem"
           >
-            <PopoverBody width="100%" align="center" p={4}>
-              <Flex justify="space-between" align="center">
+            <PopoverBody width="100%" align="center" p={2}>
+              <Flex justify="space-between" align="center" mr={2}>
                 <Text>
-                  {' '}
                   <FormattedMessage
                     id="WALLET_CONNECT_TO"
                     values={{

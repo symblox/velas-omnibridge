@@ -1,15 +1,7 @@
-import chakraTheme from '@chakra-ui/theme';
+import { extendTheme } from '@chakra-ui/react';
 
-export const theme = {
-  ...chakraTheme,
-  styles: {
-    ...chakraTheme.styles,
-    global: {
-      ...chakraTheme.styles.global,
-    },
-  },
+export const overrides = {
   colors: {
-    ...chakraTheme.colors,
     blue: {
       50: '#edf9ff',
       100: '#ddf3ff',
@@ -52,7 +44,20 @@ export const theme = {
     modalBG: 'rgba(98, 118, 148, 0.9)',
   },
   fonts: {
-    ...chakraTheme.fonts,
     body: 'Roboto, sans-serif',
   },
+  components: {
+    Popover: {
+      parts: ['popper'],
+      baseStyle: props => ({
+        popper: {
+          zIndex: 10,
+          maxW: props.width ? props.width : 'xs',
+          w: '100%',
+        },
+      }),
+    },
+  },
 };
+
+export default extendTheme(overrides);
