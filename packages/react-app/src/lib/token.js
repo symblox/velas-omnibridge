@@ -1,6 +1,5 @@
-import { ethers } from 'ethers';
+import { ethers, constants } from 'ethers';
 
-import { ADDRESS_ZERO } from './constants';
 import { getMediatorAddress } from './helpers';
 import { getEthersProvider } from './providers';
 
@@ -80,7 +79,7 @@ export const transferAndCallToken = async (ethersProvider, token, amount) => {
 };
 
 export const fetchTokenBalance = async (token, account) => {
-  if (!account || !token || token.address === ADDRESS_ZERO) {
+  if (!account || !token || token.address === constants.AddressZero) {
     // eslint-disable-next-line
     console.log({ balanceError: 'Returning balance as 0', account, token });
     return 0;
@@ -102,7 +101,12 @@ export const fetchTokenBalanceWithProvider = async (
   token,
   account,
 ) => {
-  if (!account || !token || token.address === ADDRESS_ZERO || !ethersProvider) {
+  if (
+    !account ||
+    !token ||
+    token.address === constants.AddressZero ||
+    !ethersProvider
+  ) {
     // eslint-disable-next-line
     console.log({ balanceError: 'Returning balance as 0', account, token });
     return 0;
