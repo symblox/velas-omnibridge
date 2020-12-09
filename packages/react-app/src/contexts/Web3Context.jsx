@@ -90,6 +90,7 @@ export const Web3Provider = ({ children }) => {
         setNetwork: setChosenNetwork,
         account,
         networkMismatch,
+        connectedWallet: web3Modal.cachedProvider,
       }}
     >
       {children}
