@@ -1,5 +1,13 @@
-import { Button, Flex, Input, Text, useDisclosure } from '@chakra-ui/react';
 import React, { useContext, useEffect, useState } from 'react';
+import {
+  Button,
+  Flex,
+  Input,
+  Text,
+  useDisclosure,
+  useBreakpointValue,
+} from '@chakra-ui/react';
+import { DownArrowIcon } from '../icons/DownArrowIcon';
 import { FormattedMessage } from 'react-intl';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
@@ -7,6 +15,7 @@ import { formatValue, parseValue } from '../lib/helpers';
 import { fetchTokenBalanceWithProvider } from '../lib/token';
 import { ErrorModal } from './ErrorModal';
 import { Logo } from './Logo';
+import { SelectTokenModal } from './SelectTokenModal';
 
 export const FromToken = () => {
   const {
@@ -36,6 +45,7 @@ export const FromToken = () => {
     }
     onOpen();
   };
+  const smallScreen = useBreakpointValue({ base: true, lg: false });
 
   useEffect(() => {
     if (!account) {
@@ -66,6 +76,16 @@ export const FromToken = () => {
     >
       {message && (
         <ErrorModal message={message} isOpen={isOpen} onClose={onClose} />
+      )}
+      {!message && <SelectTokenModal onClose={onClose} isOpen={isOpen} />}
+      {!smallScreen && (
+        <svg width="100%" viewBox="0 0 381 94" fill="none">
+          <path
+            d="M359.745 4.703A7.5 7.5 0 00353.008.5H8A7.5 7.5 0 00.5 8v78A7.5 7.5 0 008 93.5h345.008a7.5 7.5 0 006.737-4.203l19.085-39a7.499 7.499 0 000-6.594l-19.085-39z"
+            fill="#fff"
+            stroke="#DAE3F0"
+          />
+        </svg>
       )}
       {token && (
         <Flex
@@ -98,6 +118,8 @@ export const FromToken = () => {
               <Text fontSize="lg" fontWeight="bold" mx={2}>
                 {token.name}
               </Text>
+              {/* <ChevronDownIcon /> */}
+              <DownArrowIcon />
             </Flex>
             {balance >= 0 && (
               <Text color="grey" mt={{ base: 2, lg: 0 }}>

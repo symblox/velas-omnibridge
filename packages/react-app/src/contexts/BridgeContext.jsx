@@ -244,6 +244,7 @@ export const BridgeProvider = ({ children }) => {
     providerNetwork,
     lastChainId,
     intl,
+    connectedWallet,
   ]);
 
   const setDefaultTokenList = useCallback(
