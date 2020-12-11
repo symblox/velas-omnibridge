@@ -29,6 +29,6 @@ const zhCn = {
   TRANSFER_NOT_ENOUGH_BAL: '余额不足',
   TRANSFER_AMOUNT_TOO_SMALL: '输入金额需大于 {amount}',
   TRANSFER_AMOUNT_TOO_LARGE: '输入金额需小于 {amount}',
-  WRAP_ETHER: 'ETH 兑换 WETH',
+  WRAP_ETHER: 'ETH <-> WETH',
 };
 export default zhCn;

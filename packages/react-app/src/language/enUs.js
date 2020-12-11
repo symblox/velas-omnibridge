@@ -31,6 +31,6 @@ const enUs = {
   TRANSFER_NOT_ENOUGH_BAL: 'Not enough balance',
   TRANSFER_AMOUNT_TOO_SMALL: 'Please specify amount more than {amount}',
   TRANSFER_AMOUNT_TOO_LARGE: 'Please specify amount less than {amount}',
-  WRAP_ETHER: 'Wrap ETH',
+  WRAP_ETHER: 'Wrap/Unwrap ETH',
 };
 export default enUs;

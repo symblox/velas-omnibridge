@@ -88,7 +88,8 @@ export const fetchTokenBalance = async (token, account) => {
   const abi = ['function balanceOf(address) view returns (uint256)'];
   const tokenContract = new ethers.Contract(token.address, abi, ethersProvider);
   try {
-    return tokenContract.balanceOf(account);
+    if (tokenContract.address !== ethers.constants.AddressZero)
+      return tokenContract.balanceOf(account);
   } catch (error) {
     // eslint-disable-next-line
     console.log({ tokenError: error });
