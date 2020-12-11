@@ -1,5 +1,12 @@
 import React, { useContext } from 'react';
-import { Flex, Grid, Text, useBreakpointValue } from '@chakra-ui/react';
+import {
+  Flex,
+  Grid,
+  Text,
+  HStack,
+  Box,
+  useBreakpointValue,
+} from '@chakra-ui/react';
 import { FormattedMessage } from 'react-intl';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
@@ -10,6 +17,7 @@ import { SystemFeedback } from './SystemFeedback';
 import { ToToken } from './ToToken';
 import { TransferButton } from './TransferButton';
 import { UnlockButton } from './UnlockButton';
+import { WrapETHModal } from './WrapETHModal';
 
 export const BridgeTokens = () => {
   const { network } = useContext(Web3Context);
@@ -35,14 +43,19 @@ export const BridgeTokens = () => {
         <>
           {!smallScreen && (
             <Flex w="100%" justify="space-between">
-              <Flex align="flex-start" direction="column">
-                <Text color="greyText" fontSize="sm">
-                  <FormattedMessage id="FROM" />
-                </Text>
-                <Text fontWeight="bold" fontSize="lg">
-                  {network.name}
-                </Text>
-              </Flex>
+              <HStack align="flex-start" spacing="16px">
+                <Box>
+                  <Text color="greyText" fontSize="sm">
+                    <FormattedMessage id="FROM" />
+                  </Text>
+                  <Text fontWeight="bold" fontSize="lg">
+                    {network.name}
+                  </Text>
+                </Box>
+                <Box pt="10px" justify="center">
+                  <WrapETHModal />
+                </Box>
+              </HStack>
               {isERC20Dai && <DaiWarning />}
               <Flex align="flex-end" direction="column">
                 <Text color="greyText" fontSize="sm">
@@ -61,14 +74,19 @@ export const BridgeTokens = () => {
           >
             {smallScreen && isERC20Dai && <DaiWarning />}
             {smallScreen && (
-              <Flex align="flex-start" direction="column" m={2}>
-                <Text color="greyText" fontSize="sm">
-                  <FormattedMessage id="FROM" />
-                </Text>
-                <Text fontWeight="bold" fontSize="lg">
-                  {network.name}
-                </Text>
-              </Flex>
+              <HStack align="flex-start" spacing="16px" m={2}>
+                <Box>
+                  <Text color="greyText" fontSize="sm">
+                    <FormattedMessage id="FROM" />
+                  </Text>
+                  <Text fontWeight="bold" fontSize="lg">
+                    {network.name}
+                  </Text>
+                </Box>
+                <Box pt="10px" justify="center">
+                  <WrapETHModal />
+                </Box>
+              </HStack>
             )}
             <FromToken />
             <Flex

@@ -7,15 +7,10 @@ import {
   getGraphEndpoint,
   getTokenListUrl,
   isxDaiChain,
-  uniqueTokens,
 } from './helpers';
 
 export const fetchTokenList = async chainId => {
-  const [defaultTokens, subgraphTokens] = await Promise.all([
-    fetchDefaultTokens(chainId),
-    fetchTokensFromSubgraph(chainId),
-  ]);
-  const tokens = uniqueTokens(defaultTokens.concat(subgraphTokens));
+  const tokens = await fetchDefaultTokens(chainId);
   return tokens;
 };
 

@@ -32,9 +32,13 @@ const POLLING_INTERVAL = 2000;
 export const BridgeContext = React.createContext({});
 
 export const BridgeProvider = ({ children }) => {
-  const { ethersProvider, account, providerNetwork, setNetwork } = useContext(
-    Web3Context,
-  );
+  const {
+    ethersProvider,
+    account,
+    providerNetwork,
+    setNetwork,
+    connectedWallet,
+  } = useContext(Web3Context);
   const [fromToken, setFromToken] = useState();
   const [toToken, setToToken] = useState();
   const [fromAmount, setFromAmount] = useState(0);
@@ -151,17 +155,20 @@ export const BridgeProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    if (
+    if (!connectedWallet) {
+      // Set to the default chainId when the wallet is not connected
+      setDefaultToken(networkOptions[0].value);
+      setNetwork(networkOptions[0]);
+      setLastChainId(networkOptions[0].value);
+    } else if (
       providerNetwork &&
       providerNetwork.chainId &&
       parseInt(providerNetwork.chainId) !== parseInt(lastChainId)
     ) {
+      // Set to the selected chainId when wallet is connected
       setDefaultToken(getNetworkOption(providerNetwork.chainId).value);
       setNetwork(getNetworkOption(providerNetwork.chainId));
       setLastChainId(providerNetwork.chainId);
-    } else if (!parseInt(lastChainId)) {
-      setDefaultToken(networkOptions[0].value);
-      setNetwork(networkOptions[0]);
     }
 
     const subscriptions = [];
@@ -237,6 +244,7 @@ export const BridgeProvider = ({ children }) => {
     providerNetwork,
     lastChainId,
     intl,
+    connectedWallet,
   ]);
 
   const setDefaultTokenList = useCallback(

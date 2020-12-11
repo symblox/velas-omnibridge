@@ -1,11 +1,6 @@
 import {
   Button,
   Flex,
-  Image,
-  Input,
-  InputGroup,
-  InputRightElement,
-  Link,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -13,14 +8,11 @@ import {
   ModalHeader,
   ModalOverlay,
   Text,
-  useBreakpointValue,
 } from '@chakra-ui/react';
 import React, { useContext, useEffect, useRef, useState } from 'react';
 
-import SearchIcon from '../assets/search.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
-import { PlusIcon } from '../icons/PlusIcon';
 import { formatValue } from '../lib/helpers';
 import { Logo } from './Logo';
 
@@ -38,17 +30,17 @@ export const TokenSelectorModal = ({ isOpen, onClose, onCustom }) => {
 
   const initialRef = useRef();
 
-  const onChange = e => {
-    const newFilteredTokenList = tokenList.filter(token => {
-      const lowercaseSearch = e.target.value.toLowerCase();
-      return (
-        token.name.toLowerCase().includes(lowercaseSearch) ||
-        token.symbol.toLowerCase().includes(lowercaseSearch) ||
-        token.address.toLowerCase().includes(lowercaseSearch)
-      );
-    });
-    setFilteredTokenList(newFilteredTokenList);
-  };
+  // const onChange = e => {
+  //   const newFilteredTokenList = tokenList.filter(token => {
+  //     const lowercaseSearch = e.target.value.toLowerCase();
+  //     return (
+  //       token.name.toLowerCase().includes(lowercaseSearch) ||
+  //       token.symbol.toLowerCase().includes(lowercaseSearch) ||
+  //       token.address.toLowerCase().includes(lowercaseSearch)
+  //     );
+  //   });
+  //   setFilteredTokenList(newFilteredTokenList);
+  // };
 
   useEffect(() => {
     setFilteredTokenList(tokenList);
@@ -66,8 +58,6 @@ export const TokenSelectorModal = ({ isOpen, onClose, onCustom }) => {
     }
     setDefaultTokenList(network.value, localTokenList);
   }, [network, setDefaultTokenList]);
-
-  const smallScreen = useBreakpointValue({ sm: false, base: true });
 
   return (
     <Modal
@@ -89,36 +79,10 @@ export const TokenSelectorModal = ({ isOpen, onClose, onCustom }) => {
           <ModalHeader pb={0}>
             <Flex align="center" justify="space-between">
               Select a Token
-              <Link
-                fontSize="md"
-                color="blue.500"
-                fontWeight="normal"
-                onClick={onCustom}
-              >
-                <Flex align="center">
-                  <PlusIcon mr={2} />
-                  <Text>{smallScreen ? 'Custom' : 'Add Custom Token'}</Text>
-                </Flex>
-              </Link>
             </Flex>
           </ModalHeader>
           <ModalCloseButton size="lg" top={-10} right={-10} color="white" />
           <ModalBody>
-            <Text color="grey" mb={2}>
-              Search Name or Paste Token Contract Address
-            </Text>
-            <InputGroup mb={4} borderColor="#DAE3F0">
-              <Input
-                placeholder="Search ..."
-                size="sm"
-                onChange={onChange}
-                _placeholder={{ color: 'grey' }}
-                ref={initialRef}
-              />
-              <InputRightElement px={0}>
-                <Image src={SearchIcon} />
-              </InputRightElement>
-            </InputGroup>
             {filteredTokenList.map(token => (
               <Button
                 variant="outline"

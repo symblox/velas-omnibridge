@@ -3,11 +3,9 @@ import React from 'react';
 import { CONFIG } from '../config';
 import { NetworkIcon } from '../icons/NetworkIcon';
 
-export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000';
-
 export const languageOptions = [
   {
-    key: 'zh',
+    key: 'cn',
     value: '中',
     icon: <NetworkIcon />,
   },
@@ -183,9 +181,8 @@ export const ambs = {
 
 export const defaultTokensUrl = {
   100: 'https://tokens.honeyswap.org',
-  1: 'https://tokens.uniswap.org',
-  42: '',
-  77: '',
-  111: '',
-  106: '',
+  1: '/tokens.json',
+  42: '/tokens.json',
+  111: '/tokens.json',
+  106: '/tokens.json',
 };

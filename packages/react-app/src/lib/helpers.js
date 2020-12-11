@@ -237,17 +237,7 @@ export const formatValue = (num, dec) => {
 // };
 
 export const parseValue = (num, dec) => {
-  // if (!num) {
-  //   return window.BigInt(0);
-  // }
-  // const number = Number(num);
-  // const numberDec = countDecimals(number);
-  // const round = window.BigInt(10 ** Number(dec));
-  // const value =
-  //   (window.BigInt(Math.floor(number * 10 ** numberDec)) * round) /
-  //   window.BigInt(10 ** numberDec);
-  // return value;
-  return utils.parseUnits(num.toString(), dec.toString());
+  return utils.parseUnits(!num ? '0' : num.toString(), dec.toString());
 };
 
 // ETH/ERC20 Default Limits
