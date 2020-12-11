@@ -5,7 +5,7 @@ import { NetworkIcon } from '../icons/NetworkIcon';
 
 export const languageOptions = [
   {
-    key: 'zh',
+    key: 'cn',
     value: '中',
     icon: <NetworkIcon />,
   },
