@@ -49,6 +49,9 @@ export function handleNewToken(event: NewTokenRegistered): void {
   } else if (network == 'poa-sokol') {
     token.homeChainId = 77;
     token.foreignChainId = 42;
+  } else if (network == 'velas') {
+    token.homeChainId = 106;
+    token.foreignChainId = 1;
   }
 
   token.save();

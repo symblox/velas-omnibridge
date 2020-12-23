@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 description: Subgraph that indexes the omnibridge transfers
-repository: https://github.com/raid-guild/xdai-omnibridge
+repository: https://github.com/symblox/velas-omnibridge
 schema:
   file: ./schema.graphql
 dataSources:
