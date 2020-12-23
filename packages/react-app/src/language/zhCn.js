@@ -30,5 +30,10 @@ const zhCn = {
   TRANSFER_AMOUNT_TOO_SMALL: '输入金额需大于 {amount}',
   TRANSFER_AMOUNT_TOO_LARGE: '输入金额需小于 {amount}',
   WRAP_ETHER: 'ETH <-> WETH',
+  HISTORY: '交易历史',
+  TX_DATE: '日期',
+  TX_HASH: '交易号',
+  TX_NOT_FOUND: '未找到任何交易',
+  TX_VIEW_TRANSACTION: "查看交易"
 };
 export default zhCn;

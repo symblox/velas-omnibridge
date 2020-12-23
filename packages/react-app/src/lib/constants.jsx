@@ -57,7 +57,7 @@ export const networkNames = {
   77: 'Sokol Testnet',
   42: 'Kovan Testnet',
   111: 'Velas Testnet',
-  106: 'Velas',
+  106: 'VELAS',
 };
 
 export const chainUrls = {
@@ -153,12 +153,12 @@ export const defaultTokens = {
 };
 
 export const graphEndpoints = {
-  100: 'https://api.thegraph.com/subgraphs/name/dan13ram/xdai-omnibridge',
-  1: 'https://api.thegraph.com/subgraphs/name/dan13ram/mainnet-omnibridge',
-  77: 'https://api.thegraph.com/subgraphs/name/dan13ram/sokol-omnibridge',
-  42: 'https://api.thegraph.com/subgraphs/name/dan13ram/kovan-omnibridge',
-  111: '',
-  106: '',
+  100: 'https://api.thegraph.com/subgraphs/name/symblox/xdai-omnibridge',
+  1: 'https://api.thegraph.com/subgraphs/name/symblox/mainnet-omnibridge',
+  77: 'https://api.thegraph.com/subgraphs/name/symblox/sokol-omnibridge',
+  42: 'https://api.thegraph.com/subgraphs/name/symblox/kovan-omnibridge',
+  111: 'https://rpc.symblox.net:8080/graph/subgraphs/name/symblox/velas-omnibridge',
+  106: 'https://rpc.symblox.net:8080/graph/subgraphs/name/symblox/velas-omnibridge',
 };
 
 export const mediators = {

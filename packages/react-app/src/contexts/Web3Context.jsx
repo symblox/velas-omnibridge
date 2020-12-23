@@ -14,6 +14,10 @@ const providerOptions = {
     package: WalletConnectProvider,
     options: {
       infuraId: CONFIG.infuraId,
+      rpc: {
+        106: "https://explorer.velas.com/rpc",
+        111: "https://explorer.testnet.veladev.net/rpc",
+      },
     },
   },
 };

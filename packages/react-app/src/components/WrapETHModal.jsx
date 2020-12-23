@@ -14,7 +14,7 @@ export const WrapETHModal = ({ isOpen, onClose }) => {
       {token && !isxDaiChain(token.chainId) && (
         <Link
           href={
-            token.chainId == 1
+            token.chainId === 1
               ? `https://widget.kyber.network/v0.8.0/?type=swap&mode=tab&lang=${language.key}&defaultPair=ETH_WETH&&network=mainnet&theme=theme-emerald`
               : 'https://widget-test.relay.radar.tech/'
           }

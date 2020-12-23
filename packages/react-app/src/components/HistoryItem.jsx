@@ -1,11 +1,12 @@
 import { Flex, Grid, Link, Text, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import { getMonitorUrl } from '../lib/helpers';
 
 export const HistoryItem = ({ chainId, date, hash }) => {
   const linkText = useBreakpointValue({
-    base: 'View Transaction',
+    base: <FormattedMessage id="TX_VIEW_TRANSACTION" />,
     md: hash,
   });
 

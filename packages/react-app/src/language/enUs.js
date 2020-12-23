@@ -32,5 +32,10 @@ const enUs = {
   TRANSFER_AMOUNT_TOO_SMALL: 'Please specify amount more than {amount}',
   TRANSFER_AMOUNT_TOO_LARGE: 'Please specify amount less than {amount}',
   WRAP_ETHER: 'Wrap/Unwrap ETH',
+  HISTORY: 'History',
+  TX_DATE: 'Date',
+  TX_HASH: 'Txn Hash',
+  TX_NOT_FOUND: 'No History Found',
+  TX_VIEW_TRANSACTION: "View Transaction"
 };
 export default enUs;

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import Logo from '../assets/symblox.svg';
-// import { HistoryIcon } from '../icons/HistoryIcon';
+import { HistoryIcon } from '../icons/HistoryIcon';
 import { LanguageSelector } from './LanguageSelector';
 import { WalletSelector } from './WalletSelector';
 
@@ -29,7 +29,7 @@ export const Header = () => {
     >
       <Flex justify="space-between" h={20} align="center">
         <Link to="/">
-          <Flex ml={2} justify="space-around" align="center">
+          <Flex display={{ base: 'none', md: 'flex' }} ml={2} justify="space-around" align="center">
             <Image src={Logo} w={6} />
             <Text fontWeight="bold">
               <FormattedMessage id="LOGO" />
@@ -79,7 +79,7 @@ export const Header = () => {
         // align={{ base: 'flex-start', md: 'center' }}
         // pb={{ base: 4, md: 0 }}
       >
-        {/* <Link to="/history">
+        <Link to="/history">
           <Flex
             align="center"
             px={4}
@@ -89,9 +89,11 @@ export const Header = () => {
             _hover={{ color: 'blue.500' }}
           >
             <HistoryIcon mr={2} />
-            <Text color="black"> History</Text>
+            <Text color="black">
+              <FormattedMessage id="HISTORY" />
+            </Text>
           </Flex>
-        </Link> */}
+        </Link>
         <WalletSelector />
         {/* <NetworkSelector /> */}
         <LanguageSelector />
