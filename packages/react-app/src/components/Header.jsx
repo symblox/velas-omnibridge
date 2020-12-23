@@ -29,9 +29,9 @@ export const Header = () => {
     >
       <Flex justify="space-between" h={20} align="center">
         <Link to="/">
-          <Flex display={{ base: 'none', md: 'flex' }} ml={2} justify="space-around" align="center">
+          <Flex ml={2} justify="space-around" align="center">
             <Image src={Logo} w={6} />
-            <Text fontWeight="bold">
+            <Text fontWeight="bold" display={{ base: 'none', md: 'flex' }}>
               <FormattedMessage id="LOGO" />
             </Text>
           </Flex>
