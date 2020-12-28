@@ -118,7 +118,6 @@ export const FromToken = () => {
               <Text fontSize="lg" fontWeight="bold" mx={2}>
                 {token.name}
               </Text>
-              {/* <ChevronDownIcon /> */}
               <DownArrowIcon />
             </Flex>
             {balance >= 0 && (
