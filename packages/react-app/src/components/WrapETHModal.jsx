@@ -15,7 +15,7 @@ export const WrapETHModal = ({ isOpen, onClose }) => {
         <Link
           href={
             token.chainId === 1
-              ? `https://app.uniswap.org/#/swap?outputCurrency=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2&use=v2`
+              ? `https://widget.kyber.network/v0.8.0/?type=swap&mode=tab&lang=${language.key}&defaultPair=ETH_WETH&&network=mainnet&theme=theme-emerald`
               : 'https://widget-test.relay.radar.tech/'
           }
           isExternal
