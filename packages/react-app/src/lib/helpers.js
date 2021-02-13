@@ -13,7 +13,7 @@ import { getOverriddenMediator, isOverridden } from './overrides';
 
 export const getBridgeNetwork = chainId => {
   switch (chainId) {
-    case 1:
+    case 128:
       return 106;
     case 42:
       return 111;
@@ -21,7 +21,7 @@ export const getBridgeNetwork = chainId => {
       return 42;
     case 106:
     default:
-      return 1;
+      return 128;
   }
 };
 
@@ -32,8 +32,10 @@ export const isxDaiChain = chainId => {
     case 42:
       return false;
     case 106:
-      return true;
+      return false;
     case 111:
+      return true;
+    case 128:
       return true;
     case 77:
       return true;
@@ -49,10 +51,12 @@ export const getDefaultToken = chainId => {
       return defaultTokens[1];
     case 42:
       return defaultTokens[42];
-    case 111:
-      return defaultTokens[111];
     case 106:
       return defaultTokens[106];
+    case 111:
+      return defaultTokens[111];
+    case 128:
+      return defaultTokens[128];
     case 77:
       return defaultTokens[77];
     case 100:
@@ -70,10 +74,12 @@ export const getMediatorAddress = (tokenAddress, chainId) => {
       return mediators[1];
     case 42:
       return mediators[42];
-    case 111:
-      return mediators[111];
     case 106:
       return mediators[106];
+    case 111:
+      return mediators[111];
+    case 128:
+      return mediators[128];
     case 77:
       return mediators[77];
     case 100:
@@ -88,10 +94,12 @@ export const getNetworkName = chainId => {
       return networkNames[1];
     case 42:
       return networkNames[42];
-    case 111:
-      return networkNames[111];
     case 106:
       return networkNames[106];
+    case 111:
+      return networkNames[111];
+    case 128:
+      return networkNames[128];
     case 77:
       return networkNames[77];
     case 100:
@@ -106,10 +114,12 @@ export const getAMBAddress = chainId => {
       return ambs[1];
     case 42:
       return ambs[42];
-    case 111:
-      return ambs[111];
     case 106:
       return ambs[106];
+    case 111:
+      return ambs[111];
+    case 128:
+      return ambs[128];
     case 77:
       return ambs[77];
     case 100:
@@ -124,10 +134,12 @@ export const getGraphEndpoint = chainId => {
       return graphEndpoints[1];
     case 42:
       return graphEndpoints[42];
-    case 111:
-      return graphEndpoints[111];
     case 106:
       return graphEndpoints[106];
+    case 111:
+      return graphEndpoints[111];
+    case 128:
+      return graphEndpoints[128];
     case 77:
       return graphEndpoints[77];
     case 100:
@@ -142,10 +154,12 @@ export const getRPCUrl = chainId => {
       return chainUrls[1].rpc;
     case 42:
       return chainUrls[42].rpc;
-    case 111:
-      return chainUrls[111].rpc;
     case 106:
       return chainUrls[106].rpc;
+    case 111:
+      return chainUrls[111].rpc;
+    case 128:
+      return chainUrls[128].rpc;
     case 77:
       return chainUrls[77].rpc;
     case 100:
@@ -160,10 +174,12 @@ export const getExplorerUrl = chainId => {
       return chainUrls[1].explorer;
     case 42:
       return chainUrls[42].explorer;
-    case 111:
-      return chainUrls[111].explorer;
     case 106:
       return chainUrls[106].explorer;
+    case 111:
+      return chainUrls[111].explorer;
+    case 128:
+      return chainUrls[128].explorer;
     case 77:
       return chainUrls[77].explorer;
     case 100:
@@ -182,6 +198,8 @@ export const getMonitorUrl = (chainId, hash) => {
       return `${testUrl}42/${hash}`;
     case 111:
       return `${testUrl}111/${hash}`;
+    case 128:
+      return `${testUrl}128/${hash}`;
     case 106:
     default:
       return `${url}106/${hash}`;
@@ -209,10 +227,12 @@ export const getTokenListUrl = chainId => {
       return defaultTokensUrl[1];
     case 42:
       return defaultTokensUrl[42];
-    case 111:
-      return defaultTokensUrl[111];
     case 106:
       return defaultTokensUrl[106];
+    case 111:
+      return defaultTokensUrl[111];
+    case 128:
+      return defaultTokensUrl[128];
     case 77:
       return defaultTokensUrl[77];
     case 100:

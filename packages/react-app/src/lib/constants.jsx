@@ -18,17 +18,17 @@ export const languageOptions = [
 
 export const networkOptions = [
   {
-    value: 1,
+    value: 128,
     key: 0,
     bridge: { chainId: 106, name: 'VELAS' },
-    label: 'Mainnet',
-    name: 'ETH Mainnet',
+    label: 'HECO',
+    name: 'HECO',
     icon: <NetworkIcon />,
   },
   {
     value: 106,
     key: 1,
-    bridge: { chainId: 1, name: 'ETH Mainnet' },
+    bridge: { chainId: 128, name: 'HECO' },
     label: 'VELAS',
     name: 'VELAS',
     icon: <NetworkIcon />,
@@ -56,8 +56,9 @@ export const networkNames = {
   1: 'Ethereum',
   77: 'Sokol Testnet',
   42: 'Kovan Testnet',
-  111: 'Velas Testnet',
   106: 'VELAS',
+  111: 'Velas Testnet',
+  128: 'HECO',
 };
 
 export const chainUrls = {
@@ -85,17 +86,23 @@ export const chainUrls = {
     chainId: 42,
     name: 'Kovan Testnet',
   },
+  106: {
+    rpc: `https://explorer.velas.com/rpc`,
+    explorer: 'https://explorer.velas.com',
+    chainId: 106,
+    name: 'VELAS',
+  },
   111: {
     rpc: `https://explorer.testnet.veladev.net/rpc`,
     explorer: 'https://explorer.testnet.veladev.net',
     chainId: 111,
     name: 'VELAS Testnet',
   },
-  106: {
-    rpc: `https://explorer.velas.com/rpc`,
-    explorer: 'https://explorer.velas.com',
-    chainId: 106,
-    name: 'VELAS',
+  128: {
+    rpc: `https://http-mainnet-node.huobichain.com`,
+    explorer: 'https://hecochain.io',
+    chainId: 128,
+    name: 'HECO',
   },
 };
 
@@ -132,6 +139,15 @@ export const defaultTokens = {
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
   },
+  106: {
+    name: 'Symblox V2',
+    address: '0x01db6acfa20562ba835ae9f5085859580a0b1386',
+    symbol: 'SYX',
+    decimals: 18,
+    chainId: 106,
+    logoURI:
+      'https://raw.githubusercontent.com/symblox/assets/master/blockchains/velas-main/assets/0x01Db6ACFA20562Ba835aE9F5085859580A0b1386/logo.png',
+  },
   111: {
     name: 'USDT on VELAS',
     address: '0x170eaf824d3cf6c61c7dffffad7aa59f14ff6762',
@@ -141,14 +157,14 @@ export const defaultTokens = {
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
   },
-  106: {
-    name: 'USDT on VELAS',
-    address: '0x4b773e1ae1baa4894e51cc1d1faf485c91b1012f',
-    symbol: 'USDT',
-    decimals: 6,
-    chainId: 106,
+  128: {
+    name: 'Symblox V2 on HECO',
+    address: '0x02a71b6a8531060b7b7a370a06fceee21669c321',
+    symbol: 'SYX',
+    decimals: 18,
+    chainId: 128,
     logoURI:
-      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
+      'https://raw.githubusercontent.com/symblox/assets/master/blockchains/velas-main/assets/0x01Db6ACFA20562Ba835aE9F5085859580A0b1386/logo.png',
   },
 };
 
@@ -167,7 +183,8 @@ export const mediators = {
   1: '0x3c0A98a372cF83Cd491aE8fdE700934D502fBeD9',
   100: '0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d',
   111: '0x51B82CE1621EC34a3165Cf80EE75fcb8C346704d',
-  106: '0xFA9BF979a6fF61709a9055DA296d8A86b0492B28',
+  106: '0x378A5f120ab3Ff32CAa7E0e8bA963Bd82961Be57',
+  128: '0x0416C32f4A64b6cb626aAB54CcB974c5062d3d51',
 };
 
 export const ambs = {
@@ -176,7 +193,8 @@ export const ambs = {
   1: '0xce74083Bf7Ff48dF33D194080a8945F12222b9c5',
   100: '0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59',
   111: '0xFB8874b46D91e34B16489D458c9d952e9Bf74f63',
-  106: '0x057D4A3F2bA67b81F6E184d55aEC9B623E34Cba3',
+  106: '0x71340146b5DdAC8F339F576f3833Ce06B2D6697A',
+  128: '0x604C48eB45Dab7Dac69d2608c49d646Cfe275a95',
 };
 
 export const defaultTokensUrl = {
@@ -185,4 +203,5 @@ export const defaultTokensUrl = {
   42: '/tokens.json',
   111: '/tokens.json',
   106: '/tokens.json',
+  128: '/tokens.json',
 };

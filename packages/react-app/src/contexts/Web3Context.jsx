@@ -15,8 +15,9 @@ const providerOptions = {
     options: {
       infuraId: CONFIG.infuraId,
       rpc: {
-        106: "https://explorer.velas.com/rpc",
-        111: "https://explorer.testnet.veladev.net/rpc",
+        106: 'https://explorer.velas.com/rpc',
+        111: 'https://explorer.testnet.veladev.net/rpc',
+        128: 'https://http-mainnet-node.huobichain.com',
       },
     },
   },
