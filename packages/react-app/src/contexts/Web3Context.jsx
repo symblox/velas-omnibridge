@@ -15,8 +15,9 @@ const providerOptions = {
     options: {
       infuraId: CONFIG.infuraId,
       rpc: {
-        106: "https://explorer.velas.com/rpc",
-        111: "https://explorer.testnet.veladev.net/rpc",
+        97: 'https://data-seed-prebsc-2-s2.binance.org:8545',
+        106: 'https://explorer.velas.com/rpc',
+        111: 'https://explorer.testnet.veladev.net/rpc',
       },
     },
   },

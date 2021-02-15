@@ -18,6 +18,22 @@ export const languageOptions = [
 
 export const networkOptions = [
   {
+    value: 111,
+    key: 3,
+    bridge: { chainId: 97, name: 'BSC Testnet' },
+    label: 'VELAS (Testnet)',
+    name: 'VELAS Testnet',
+    icon: <NetworkIcon />,
+  },
+  {
+    value: 97,
+    key: 4,
+    bridge: { chainId: 111, name: 'VELAS Testnet' },
+    label: 'BSC Testnet',
+    name: 'BSC Testnet',
+    icon: <NetworkIcon />,
+  },
+  {
     value: 1,
     key: 0,
     bridge: { chainId: 106, name: 'VELAS' },
@@ -33,22 +49,6 @@ export const networkOptions = [
     name: 'VELAS',
     icon: <NetworkIcon />,
   },
-  {
-    value: 111,
-    key: 3,
-    bridge: { chainId: 42, name: 'Kovan Testnet' },
-    label: 'VELAS (Testnet)',
-    name: 'VELAS Testnet',
-    icon: <NetworkIcon />,
-  },
-  {
-    value: 42,
-    key: 4,
-    bridge: { chainId: 111, name: 'VELAS Testnet' },
-    label: 'Kovan',
-    name: 'Kovan Testnet',
-    icon: <NetworkIcon />,
-  },
 ];
 
 export const networkNames = {
@@ -56,6 +56,7 @@ export const networkNames = {
   1: 'Ethereum',
   77: 'Sokol Testnet',
   42: 'Kovan Testnet',
+  97: 'BSC Testnet',
   111: 'Velas Testnet',
   106: 'VELAS',
 };
@@ -84,6 +85,12 @@ export const chainUrls = {
     explorer: 'https://kovan.etherscan.io',
     chainId: 42,
     name: 'Kovan Testnet',
+  },
+  97: {
+    rpc: `https://data-seed-prebsc-2-s2.binance.org:8545`,
+    explorer: 'https://testnet.bscscan.com/',
+    chainId: 97,
+    name: 'BSC Testnet',
   },
   111: {
     rpc: `https://explorer.testnet.veladev.net/rpc`,
@@ -132,14 +139,23 @@ export const defaultTokens = {
     logoURI:
       'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
   },
+  97: {
+    name: 'Symblox on BSC',
+    address: '0x4151dAa0E2D282439A9DC8dd988eEe688414f246',
+    symbol: 'SYX',
+    decimals: 18,
+    chainId: 97,
+    logoURI:
+      'https://raw.githubusercontent.com/symblox/assets/master/blockchains/velas-main/assets/0x01Db6ACFA20562Ba835aE9F5085859580A0b1386/logo.png',
+  },
   111: {
-    name: 'USDT on VELAS',
-    address: '0x170eaf824d3cf6c61c7dffffad7aa59f14ff6762',
-    symbol: 'USDT',
-    decimals: 6,
+    name: 'Symblox',
+    address: '0x28a6312D786e9d7a78637dD137AbeF5332F3b2Aa',
+    symbol: 'SYX',
+    decimals: 18,
     chainId: 111,
     logoURI:
-      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png',
+      'https://raw.githubusercontent.com/symblox/assets/master/blockchains/velas-main/assets/0x01Db6ACFA20562Ba835aE9F5085859580A0b1386/logo.png',
   },
   106: {
     name: 'USDT on VELAS',
@@ -166,7 +182,8 @@ export const mediators = {
   77: '0x40CdfF886715A4012fAD0219D15C98bB149AeF0e',
   1: '0x3c0A98a372cF83Cd491aE8fdE700934D502fBeD9',
   100: '0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d',
-  111: '0x51B82CE1621EC34a3165Cf80EE75fcb8C346704d',
+  97: '0x277e53A33AF34394Dc2fE4eF3f6A1D927D95445B',
+  111: '0xe633Fb402dD9F57d8345046d569f6e55047961B2',
   106: '0xFA9BF979a6fF61709a9055DA296d8A86b0492B28',
 };
 
@@ -175,7 +192,8 @@ export const ambs = {
   77: '0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560',
   1: '0xce74083Bf7Ff48dF33D194080a8945F12222b9c5',
   100: '0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59',
-  111: '0xFB8874b46D91e34B16489D458c9d952e9Bf74f63',
+  97: '0xdbF242B9a406aEF8359106C496976dB2E69Bc0E2',
+  111: '0xe23278cd3fE0bb4286701B89E4856e15e8ABD10f',
   106: '0x057D4A3F2bA67b81F6E184d55aEC9B623E34Cba3',
 };
 
@@ -183,6 +201,7 @@ export const defaultTokensUrl = {
   100: 'https://tokens.honeyswap.org',
   1: '/tokens.json',
   42: '/tokens.json',
+  97: '/tokens.json',
   111: '/tokens.json',
   106: '/tokens.json',
 };

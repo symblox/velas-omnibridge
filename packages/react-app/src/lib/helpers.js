@@ -15,10 +15,10 @@ export const getBridgeNetwork = chainId => {
   switch (chainId) {
     case 1:
       return 106;
-    case 42:
+    case 97:
       return 111;
     case 111:
-      return 42;
+      return 97;
     case 106:
     default:
       return 1;
@@ -29,12 +29,12 @@ export const isxDaiChain = chainId => {
   switch (chainId) {
     case 1:
       return false;
-    case 42:
-      return false;
+    case 97:
+      return true;
     case 106:
       return true;
     case 111:
-      return true;
+      return false;
     case 77:
       return true;
     case 100:
@@ -47,8 +47,8 @@ export const getDefaultToken = chainId => {
   switch (chainId) {
     case 1:
       return defaultTokens[1];
-    case 42:
-      return defaultTokens[42];
+    case 97:
+      return defaultTokens[97];
     case 111:
       return defaultTokens[111];
     case 106:
@@ -68,8 +68,8 @@ export const getMediatorAddress = (tokenAddress, chainId) => {
   switch (chainId) {
     case 1:
       return mediators[1];
-    case 42:
-      return mediators[42];
+    case 97:
+      return mediators[97];
     case 111:
       return mediators[111];
     case 106:
@@ -86,8 +86,8 @@ export const getNetworkName = chainId => {
   switch (chainId) {
     case 1:
       return networkNames[1];
-    case 42:
-      return networkNames[42];
+    case 97:
+      return networkNames[97];
     case 111:
       return networkNames[111];
     case 106:
@@ -104,8 +104,8 @@ export const getAMBAddress = chainId => {
   switch (chainId) {
     case 1:
       return ambs[1];
-    case 42:
-      return ambs[42];
+    case 97:
+      return ambs[97];
     case 111:
       return ambs[111];
     case 106:
@@ -122,8 +122,8 @@ export const getGraphEndpoint = chainId => {
   switch (chainId) {
     case 1:
       return graphEndpoints[1];
-    case 42:
-      return graphEndpoints[42];
+    case 97:
+      return graphEndpoints[97];
     case 111:
       return graphEndpoints[111];
     case 106:
@@ -140,8 +140,8 @@ export const getRPCUrl = chainId => {
   switch (chainId) {
     case 1:
       return chainUrls[1].rpc;
-    case 42:
-      return chainUrls[42].rpc;
+    case 97:
+      return chainUrls[97].rpc;
     case 111:
       return chainUrls[111].rpc;
     case 106:
@@ -158,8 +158,8 @@ export const getExplorerUrl = chainId => {
   switch (chainId) {
     case 1:
       return chainUrls[1].explorer;
-    case 42:
-      return chainUrls[42].explorer;
+    case 97:
+      return chainUrls[97].explorer;
     case 111:
       return chainUrls[111].explorer;
     case 106:
@@ -180,6 +180,8 @@ export const getMonitorUrl = (chainId, hash) => {
       return `${url}1/${hash}`;
     case 42:
       return `${testUrl}42/${hash}`;
+    case 97:
+      return `${testUrl}97/${hash}`;
     case 111:
       return `${testUrl}111/${hash}`;
     case 106:
@@ -207,8 +209,8 @@ export const getTokenListUrl = chainId => {
   switch (chainId) {
     case 1:
       return defaultTokensUrl[1];
-    case 42:
-      return defaultTokensUrl[42];
+    case 97:
+      return defaultTokensUrl[97];
     case 111:
       return defaultTokensUrl[111];
     case 106:
