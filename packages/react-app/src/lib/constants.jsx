@@ -148,9 +148,18 @@ export const defaultTokens = {
     logoURI:
       'https://raw.githubusercontent.com/symblox/assets/master/blockchains/velas-main/assets/0x01Db6ACFA20562Ba835aE9F5085859580A0b1386/logo.png',
   },
+  // 111: {
+  //   name: 'Symblox V3',
+  //   address: '0xa94BFDE008232f03A7C34b7B994CcAA07a28283D',
+  //   symbol: 'SYX',
+  //   decimals: 18,
+  //   chainId: 111,
+  //   logoURI:
+  //     'https://raw.githubusercontent.com/symblox/assets/master/blockchains/velas-main/assets/0x01Db6ACFA20562Ba835aE9F5085859580A0b1386/logo.png',
+  // },
   111: {
-    name: 'Symblox V3',
-    address: '0xa94BFDE008232f03A7C34b7B994CcAA07a28283D',
+    name: 'Symblox V2',
+    address: '0x28a6312D786e9d7a78637dD137AbeF5332F3b2Aa',
     symbol: 'SYX',
     decimals: 18,
     chainId: 111,
