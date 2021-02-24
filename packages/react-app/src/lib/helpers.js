@@ -224,13 +224,12 @@ export const getTokenListUrl = chainId => {
 };
 
 export const formatValue = (num, dec) => {
+  num = parseFloat(num).toLocaleString().replace(/,/g, '');
   // const number = window.BigInt(num);
   // const round = window.BigInt(10 ** Number(dec));
   // const value = Number((number * window.BigInt(1000)) / round) / 1000;
   // return value.toFixed(3);
-  return parseFloat(utils.formatUnits(num.toString(), dec.toString())).toFixed(
-    3,
-  );
+  return parseFloat(utils.formatUnits(num, dec.toString())).toFixed(3);
 };
 
 // const countDecimals = value => {

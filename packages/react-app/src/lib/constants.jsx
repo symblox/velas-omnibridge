@@ -141,7 +141,7 @@ export const defaultTokens = {
   },
   97: {
     name: 'Symblox on BSC',
-    address: '0x4151dAa0E2D282439A9DC8dd988eEe688414f246',
+    address: '0xd2f83494cd97e61f117015ba79cbf8f42fd13634',
     symbol: 'SYX',
     decimals: 18,
     chainId: 97,
