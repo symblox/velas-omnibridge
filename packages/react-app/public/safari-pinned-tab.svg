@@ -1,26 +1,42 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
- preserveAspectRatio="xMidYMid meet">
-<metadata>
-Created by potrace 1.11, written by Peter Selinger 2001-2013
-</metadata>
-<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M160 4201 c-54 -20 -115 -78 -140 -134 -18 -40 -19 -100 -19 -1392
--1 -1458 -3 -1390 52 -1508 36 -74 128 -168 207 -211 133 -71 -48 -66 2315
--63 1172 1 2144 6 2160 10 61 16 160 69 213 114 67 58 116 131 147 219 l24 69
-0 1348 c1 957 -2 1360 -10 1391 -13 52 -75 123 -132 150 -59 27 -135 32 -198
-11 -58 -19 -95 -54 -309 -285 -58 -62 -127 -136 -155 -165 -27 -29 -99 -106
--160 -171 -60 -64 -132 -140 -158 -168 -27 -28 -88 -94 -136 -146 -49 -52
--106 -113 -127 -136 -22 -22 -97 -103 -169 -179 -71 -76 -147 -157 -168 -179
--21 -22 -82 -87 -135 -145 -53 -57 -120 -128 -147 -157 -28 -28 -93 -98 -145
--155 -268 -290 -297 -312 -410 -312 -109 0 -139 21 -365 264 -38 42 -127 136
--196 210 -69 74 -137 146 -150 160 -23 25 -220 236 -304 325 -61 64 -259 275
--291 310 -16 16 -81 85 -144 153 -63 67 -126 135 -140 150 -33 36 -263 280
--323 345 -27 28 -88 93 -135 144 -110 119 -154 146 -241 148 -41 1 -83 -4
--111 -15z"/>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>syx-icon</title>
+    <defs>
+        <linearGradient x1="-9.20749032%" y1="81.7139705%" x2="87.5663389%" y2="39.7513066%" id="linearGradient-1">
+            <stop stop-color="#91257C" offset="0%"></stop>
+            <stop stop-color="#98247B" offset="11%"></stop>
+            <stop stop-color="#AC2177" offset="27%"></stop>
+            <stop stop-color="#CD1D71" offset="46%"></stop>
+            <stop stop-color="#ED186B" offset="62%"></stop>
+            <stop stop-color="#EE2669" offset="70%"></stop>
+            <stop stop-color="#F04B65" offset="85%"></stop>
+            <stop stop-color="#F3765F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-39.629257%" y1="104.392007%" x2="91.1756391%" y2="26.5532926%" id="linearGradient-2">
+            <stop stop-color="#FF3A33" offset="0%"></stop>
+            <stop stop-color="#FC06C6" offset="100%"></stop>
+        </linearGradient>
+        <path d="M335,143.547981 C335.024866,152.427628 331.515554,160.950808 325.249222,167.229691 C318.982889,173.508575 310.476747,177.024916 301.61485,177 L23,177 L61.6053338,110.064773 L116.121692,15.4097173 C125.74775,0.372351308 145.460236,-4.4441723 160.914043,4.46521174 C176.36785,13.3745958 182.119229,32.8714727 173.982803,48.7676374 L138.722223,110.064773 L301.61485,110.064773 C310.474526,110.064769 318.970876,113.593453 325.232681,119.873675 C331.494485,126.153897 335.008163,134.670564 335,143.547981 Z" id="path-3"></path>
+        <linearGradient x1="106.241232%" y1="57.1322722%" x2="-10.388653%" y2="26.2174088%" id="linearGradient-4">
+            <stop stop-color="#2E76BC" offset="0%"></stop>
+            <stop stop-color="#683B96" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="79.9330945%" x2="71.1639852%" y2="33.5423858%" id="linearGradient-5">
+            <stop stop-color="#42D9FE" offset="0%"></stop>
+            <stop stop-color="#2872FA" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0,226.624318 C-0.024782915,217.715258 3.48449581,209.162522 9.75333799,202.854019 C16.0221802,196.545517 24.5351307,193 33.413061,193 L312,193 L273.398534,260.154538 L218.793868,354.942495 C211.30477,368.263343 195.782009,374.810312 181.058546,370.85796 C166.335083,366.905609 156.142772,353.455711 156.281372,338.161702 C156.275206,332.276838 157.828584,326.496173 160.782272,321.412274 L196.28937,260.154538 L33.413061,260.154538 C14.9596097,260.154538 0,245.142547 0,226.624318 L0,226.624318 Z" id="path-6"></path>
+    </defs>
+    <g id="syx-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SYX_Logo" transform="translate(87.000000, 69.000000)" fill-rule="nonzero">
+            <g id="Path">
+                <use fill="url(#linearGradient-1)" xlink:href="#path-3"></use>
+                <use fill="url(#linearGradient-2)" xlink:href="#path-3"></use>
+            </g>
+            <g id="Path">
+                <use fill="url(#linearGradient-4)" xlink:href="#path-6"></use>
+                <use fill="url(#linearGradient-5)" xlink:href="#path-6"></use>
+            </g>
+        </g>
+    </g>
 </svg>
